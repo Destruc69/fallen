@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Website</title>
+    <style>
+    body {
+	background-color: #0077be;
+	background-image: linear-gradient(
+		rgba(255, 255, 255, 0.3),
+		rgba(255, 255, 255, 0.3)
+	), radial-gradient(circle, #0097ff, #0077be);
+	background-size: cover;
+	animation: move-background 20s ease-in-out infinite alternate;
+	animation-name: move-background;
+	animation-duration: 20s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+@keyframes move-background {
+	from {
+		background-position: 0 0;
+	}
+	to {
+		background-position: 50% 50%;
+	}
+}
+
+		h1 {
+			font-size: 36px;
+			text-align: center;
+			margin-top: 50px;
+			color: white;
+			text-shadow: 2px 2px #000;
+		}
+
+		hr {
+			width: 50%;
+			height: 3px;
+			background-color: #000;
+			margin: auto;
+			margin-top: 20px;
+			margin-bottom: 50px;
+			border: none;
+		}
+
+		button {
+			display: block;
+			width: 100%;
+			height: 50px;
+			font-size: 18px;
+			background-color: #007bff;
+			color: #fff;
+			border: none;
+			border-radius: 5px;
+			margin-bottom: 20px;
+		}
+	</style>
+    <script>
+    function openNewWindow(title, description, text) {
+      // Create a new window
+      var newWindow = window.open();
+
+      // Set the title of the new window
+      newWindow.document.title = title;
+
+      // Add the cool blue effect to the background
+      var style = newWindow.document.createElement('style');
+      style.innerHTML = `
+        body {
+          background-color: transparent;
+          background-image: linear-gradient(
+            rgba(255, 255, 255, 0.3),
+            rgba(255, 255, 255, 0.3)
+          ), radial-gradient(circle, #0097ff, #0077be);
+          background-size: cover;
+          animation: move-background 20s ease-in-out infinite alternate;
+        }
+
+        @keyframes move-background {
+          from {
+            background-position: 0 0;
+          }
+          to {
+            background-position: 50% 50%;
+          }
+        }
+      `;
+      newWindow.document.head.appendChild(style);
+
+      // Create the content for the new window
+      var content = "<h1>" + title + "</h1>";
+      content += "<p>" + description + "</p>";
+      content += "<textarea rows='30' cols='100' readonly>" + text + "</textarea>";
+
+      // Set the content of the new window
+      newWindow.document.body.innerHTML = content;
+    }
+
+    // URLs for the buttons
+    var url1 = "https://www.youtube.com/@fallen7361";
+    var url2 = "https://discord.gg/Z5rHscehpd";
+    var url3 = "https://github.com/Destruc69/ForgeWurst-Fallen";
+
+	</script>
+</head>
+<body>
+<h1>Fallen</h1>
+<hr>
+<!-- Add three buttons below the line -->
+<button onclick="window.location.href = url1;">YouTube</button>
+<button onclick="window.location.href = url2;">Discord</button>
+<button onclick="window.location.href = url3;">Github</button>
+<button onclick="openNewWindow('Dev Log', 'Thinking', 'Dont know what to add yet lol')">Dev Log</button>
+
+<!-- Add a list with titles and descriptions -->
+<h2>List</h2>
+<p>How do I contribute? <span class="tooltip">Join the discord and help contribute</span></p>
+<ul>
+    <li onclick="openNewWindow('AutoClicker', 'Interacts with the block/entity you are looking at.' , 'not yet done')">AutoClicker</li>
+    <li onclick="openNewWindow('CPvPViewer', 'View other people fighting.' , 'not yet done')">CPvPViewer</li>
+    <li onclick="openNewWindow('FastBreak', 'Allows you to break blocks faster.' , 'not yet done')">FastBreak</li>
+    <li onclick="openNewWindow('Scaffold', 'thank you phobos my beloved' , 'not yet done')">Scaffold</li>
+    <li onclick="openNewWindow('MobSpawnESP', 'Highlights areas where mobs can spawn. yellow - mobs can spawn at night red - mobs can always spawn' , 'not yet done')">MobSpawnESP</li>
+    <li onclick="openNewWindow('Radar', 'Shows the location of nearby entities. red - players orange - monsters green - animals gray - others' , 'not yet done')">Radar</li>
+    <li onclick="openNewWindow('Step', 'thank you cookie client by beloved.' , 'not yet done')">Step</li>
+    <li onclick="openNewWindow('PlayerESP', 'Highlights nearby players.' , 'not yet done')">PlayerESP</li>
+    <li onclick="openNewWindow('HudModules', 'Use arrow keys and select move hud elements' , 'not yet done')">HudModules</li>
+    <li onclick="openNewWindow('AntiLag', 'Working out of the pocket anti-lag (this anti lag is really simple).' , 'not yet done')">AntiLag</li>
+    <li onclick="openNewWindow('ItemESP', 'Highlights nearby items.' , 'not yet done')">ItemESP</li>
+    <li onclick="openNewWindow('ChestStealer', 'Steals items from chest.' , 'not yet done')">ChestStealer</li>
+    <li onclick="openNewWindow('Disabler', 'Bypass anti cheats.' , 'not yet done')">Disabler</li>
+    <li onclick="openNewWindow('X-Ray', 'Allows you to see ores through walls.' , 'not yet done')">X-Ray</li>
+    <li onclick="openNewWindow('Console', 'Prints the console.' , 'not yet done')">Console</li>
+    <li onclick="openNewWindow('SkywarsCamper', 'Makes you impossible to find.' , 'not yet done')">SkywarsCamper</li>
+    <li onclick="openNewWindow('Tunneller', 'Automatically digs a tunnel. WARNING: Although this bot will try to avoid lava and other dangers, there is no guarantee that it won't die. Only send it out with gear that you don't mind losing.' , 'not yet done')">Tunneller</li>
+    <li onclick="openNewWindow('AutoFarm', 'Harvests and re-plants crops automatically. Works with wheat, carrots, potatoes, beetroots, pumpkins, melons, cacti, sugar canes and nether warts.' , 'not yet done')">AutoFarm</li>
+    <li onclick="openNewWindow('AntiCooldown', 'Cancels the packet to the client to start cooldown.' , 'not yet done')">AntiCooldown</li>
+    <li onclick="openNewWindow('DiscordRPC', 'Discord rich presence.' , 'not yet done')">DiscordRPC</li>
+    <li onclick="openNewWindow('AntiBot', 'Helps the client know the difference between bot and a real player and remove the bot.' , 'not yet done')">AntiBot</li>
+    <li onclick="openNewWindow('Follow', 'Bot that follows entitys.' , 'not yet done')">Follow</li>
+    <li onclick="openNewWindow('AntiFog', 'Removes fog.' , 'not yet done')">AntiFog</li>
+    <li onclick="openNewWindow('AutoItemFrameDupe', 'Preforms the ItemFrame dupe.' , 'not yet done')">AutoItemFrameDupe</li>
+    <li onclick="openNewWindow('InvMove', 'Allows you to move with your inventory.' , 'not yet done')">InvMove</li>
+    <li onclick="openNewWindow('BoatRam', 'Ram your boat as fast as possible!.' , 'not yet done')">BoatRam</li>
+    <li onclick="openNewWindow('SoundEventLogger', 'If we hear sound like ligtning, And is not you. it logs the pos as there is a player there. And other ways too' , 'not yet done')">SoundEventLogger</li>
+    <li onclick="openNewWindow('Blink', 'Suspends all motion updates while enabled.' , 'not yet done')">Blink</li>
+    <li onclick="openNewWindow('AutoTotem', 'Always use totem in off-hand.' , 'not yet done')">AutoTotem</li>
+    <li onclick="openNewWindow('Flight', 'I believe i can fly.' , 'not yet done')">Flight</li>
+    <li onclick="openNewWindow('EntitySpeed', 'Move faster with Entitys/Ridables.' , 'not yet done')">EntitySpeed</li>
+    <li onclick="openNewWindow('Speed', 'I Show Speed' , 'not yet done')">Speed</li>
+    <li onclick="openNewWindow('LongJump', 'Jump far' , 'not yet done')">LongJump</li>
+    <li onclick="openNewWindow('FOV', 'Overide fov values.' , 'not yet done')">FOV</li>
+    <li onclick="openNewWindow('BedWarsBreaker', 'Break beds automatically for bed wars' , 'not yet done')">BedWarsBreaker</li>
+    <li onclick="openNewWindow('AntiAFK', 'Prevents getting kicked for idling' , 'not yet done')">AntiAFK</li>
+    <li onclick="openNewWindow('BowAimBot', 'When using a bow it will aim at entitys.' , 'not yet done')">BowAimBot</li>
+    <li onclick="openNewWindow('ClickGUI', '' , 'not yet done')">ClickGUI</li>
+    <li onclick="openNewWindow('NoFall', 'Prevents falling damage/falling.' , 'not yet done')">NoFall</li>
+    <li onclick="openNewWindow('AutoCrystal', 'Auto Crystal but for Killaura.' , 'not yet done')">AutoCrystal</li>
+    <li onclick="openNewWindow('OutlineESP', 'Renders entitys outlines for pitch and yaw' , 'not yet done')">OutlineESP</li>
+    <li onclick="openNewWindow('Killaura', 'Automatically attacks entities around you.' , 'not yet done')">Killaura</li>
+    <li onclick="openNewWindow('HitBox', 'Grow bounding boxes.' , 'not yet done')">HitBox</li>
+    <li onclick="openNewWindow('AutoAttack', '' , 'not yet done')">AutoAttack</li>
+    <li onclick="openNewWindow('Aimbot', 'Sends packets to look at entitys..' , 'not yet done')">Aimbot</li>
+    <li onclick="openNewWindow('AutoSneak', 'Makes you sneak automatically.' , 'not yet done')">AutoSneak</li>
+    <li onclick="openNewWindow('GodMode', 'Prevents damage.' , 'not yet done')">GodMode</li>
+    <li onclick="openNewWindow('HighlightESP', 'Renders enititys with a smooth white' , 'not yet done')">HighlightESP</li>
+    <li onclick="openNewWindow('FreeCam', 'Go outside of your body.' , 'not yet done')">FreeCam</li>
+    <li onclick="openNewWindow('AutoWalk', 'Makes you walk automatically.' , 'not yet done')">AutoWalk</li>
+    <li onclick="openNewWindow('Criticals', 'Get critical hits.' , 'not yet done')">Criticals</li>
+    <li onclick="openNewWindow('Nametags', 'Thank you gishcode my beloved.' , 'not yet done')">Nametags</li>
+    <li onclick="openNewWindow('FakeHackers', 'False report players with evidence!.' , 'not yet done')">FakeHackers</li>
+    <li onclick="openNewWindow('PacketCanceler', 'Cancel packets that you desire!.' , 'not yet done')">PacketCanceler</li>
+    <li onclick="openNewWindow('EntityFlight', 'Fly with Entitys/Ridables. Go down pressing S or your keybind to walk back' , 'not yet done')">EntityFlight</li>
+    <li onclick="openNewWindow('FakePlayer', 'Spawns a Fake Player.' , 'not yet done')">FakePlayer</li>
+    <li onclick="openNewWindow('AntiWeather', 'Removes rain, ect.' , 'not yet done')">AntiWeather</li>
+    <li onclick="openNewWindow('MobESP', 'Highlights nearby mobs.' , 'not yet done')">MobESP</li>
+    <li onclick="openNewWindow('Stability', 'Hold you entirely still when on ground.' , 'not yet done')">Stability</li>
+    <li onclick="openNewWindow('NoSound', 'No sounds allowed.' , 'not yet done')">NoSound</li>
+    <li onclick="openNewWindow('AntiSpam', 'Blocks chat spam by adding a counter to repeated messages.' , 'not yet done')">AntiSpam</li>
+    <li onclick="openNewWindow('AntiKick', 'Prevents kick exploits.' , 'not yet done')">AntiKick</li>
+    <li onclick="openNewWindow('Phase', 'Allows you too go through blocks.' , 'not yet done')">Phase</li>
+    <li onclick="openNewWindow('Timer', 'Changes the speed of almost everything.' , 'not yet done')">Timer</li>
+    <li onclick="openNewWindow('YawLock', 'Locks your yaw.' , 'not yet done')">YawLock</li>
+    <li onclick="openNewWindow('FastLadder', 'Allows you to climb up ladders faster.' , 'not yet done')">FastLadder</li>
+    <li onclick="openNewWindow('PacketLogger', 'See what packets the client is sending and recieving.' , 'not yet done')">PacketLogger</li>
+    <li onclick="openNewWindow('Nuker', 'Automatically breaks blocks around you.' , 'not yet done')">Nuker</li>
+    <li onclick="openNewWindow('ServerCrasher', 'Lots of methods to crash a server.' , 'not yet done')">ServerCrasher</li>
+    <li onclick="openNewWindow('Anchor', 'Fall over a hole faster and instantly.' , 'not yet done')">Anchor</li>
+    <li onclick="openNewWindow('ReachPlus', 'Creative gamemode reach.' , 'not yet done')">ReachPlus</li>
+    <li onclick="openNewWindow('ClientSideFixer', 'Max build height, ect  client sided ' , 'not yet done')">ClientSideFixer</li>
+    <li onclick="openNewWindow('Giant', 'Makes you really big.' , 'not yet done')">Giant</li>
+    <li onclick="openNewWindow('Peek', 'Shows you whats inside a shulker, thank you spect client by beloved.' , 'not yet done')">Peek</li>
+    <li onclick="openNewWindow('Fullbright', 'Allows you to see in the dark.' , 'not yet done')">Fullbright</li>
+    <li onclick="openNewWindow('Surround', 'Places blocks around you, ideal for crystal pvp.' , 'not yet done')">Surround</li>
+    <li onclick="openNewWindow('AutoSwim', 'Makes you swim automatically.' , 'not yet done')">AutoSwim</li>
+    <li onclick="openNewWindow('StashFinder', 'Logs chunks with chests/shulkers/enderchests.' , 'not yet done')">StashFinder</li>
+    <li onclick="openNewWindow('AutoSprint', 'Makes you sprint automatically.' , 'not yet done')">AutoSprint</li>
+    <li onclick="openNewWindow('FastFall', 'Fall fatser when you in the air.' , 'not yet done')">FastFall</li>
+    <li onclick="openNewWindow('AutoArmor', 'Manages your armor automatically.' , 'not yet done')">AutoArmor</li>
+    <li onclick="openNewWindow('NCPFly', 'Fly around with packets (ncp fly).' , 'not yet done')">NCPFly</li>
+    <li onclick="openNewWindow('AutoTool', 'Automatically equips the fastest applicable tool in your hotbar when you try to break a block.' , 'not yet done')">AutoTool</li>
+    <li onclick="openNewWindow('AntiBlockLag', 'Syncs block breaking with server.' , 'not yet done')">AntiBlockLag</li>
+    <li onclick="openNewWindow('AntiSwing', 'Cancels animation packets server-side.' , 'not yet done')">AntiSwing</li>
+    <li onclick="openNewWindow('AntiHunger', 'Walk, its easier.' , 'not yet done')">AntiHunger</li>
+    <li onclick="openNewWindow('Glide', 'Makes you glide down slowly when falling.' , 'not yet done')">Glide</li>
+    <li onclick="openNewWindow('ChunkKeeper', 'Keeps chunks you rendered to stay rendered.' , 'not yet done')">ChunkKeeper</li>
+    <li onclick="openNewWindow('AutoFish', 'Automatically catches fish using your best fishing rod. If it finds a better rod while fishing, it will automatically switch to it.' , 'not yet done')">AutoFish</li>
+    <li onclick="openNewWindow('NoSlowDown', 'No time to slow down when eating' , 'not yet done')">NoSlowDown</li>
+    <li onclick="openNewWindow('AntiVoid', 'Prevents you from falling in the void.' , 'not yet done')">AntiVoid</li>
+    <li onclick="openNewWindow('NoKnockBack', 'Prevents knockback.' , 'not yet done')">NoKnockBack</li>
+    <li onclick="openNewWindow('Jesus', 'Allows you to walk on water. Jesus used this hack ~2000 years ago.' , 'not yet done')">Jesus</li>
+    <li onclick="openNewWindow('Spider', 'Allows you to climb up walls like a spider.' , 'not yet done')">Spider</li>
+    <li onclick="openNewWindow('FastPlace', 'Allows you to place blocks 5 times faster.' , 'not yet done')">FastPlace</li>
+    <li onclick="openNewWindow('NoHurtCam', 'Removes hurt animation.' , 'not yet done')">NoHurtCam</li>
+    <li onclick="openNewWindow('NoWeb', 'Prevents you from getting slowed down in webs.' , 'not yet done')">NoWeb</li>
+    <li onclick="openNewWindow('NewChunks', 'Shows if chunk has never been loaded before.' , 'not yet done')">NewChunks</li>
+    <li onclick="openNewWindow('ChestESP', 'Highlights nearby chests. green - normal chests orange - trapped chests cyan - ender chests' , 'not yet done')">ChestESP</li>
+    <li onclick="openNewWindow('ElytraFlight', 'Fly with elytras.' , 'not yet done')">ElytraFlight</li>
+    <li onclick="openNewWindow('NoCom', 'A NoCom clone. ONLY WORKS ON OLD VERSIONS OF SERVERS' , 'not yet done')">NoCom</li>
+    <li onclick="openNewWindow('HackerDetector', 'Show and tell you if we suspect hackers in your game other than you.' , 'not yet done')">HackerDetector</li>
+    <li onclick="openNewWindow('PacketSender', 'Send packets that you desire!.' , 'not yet done')">PacketSender</li>
+    <li onclick="openNewWindow('Pointer', 'Lets you save temporary points.' , 'not yet done')">Pointer</li>
+    <li onclick="openNewWindow('AutoPilot', 'Simple automation for navigation.' , 'not yet done')">AutoPilot</li>
+    <li onclick="openNewWindow('ArmModel', 'Change arm model pos' , 'not yet done')">ArmModel</li>
+</ul>
