@@ -4,29 +4,8 @@
     <title>Fallen</title>
     <style>
     body {
-	background-color: #0077be;
-	background-image: linear-gradient(
-		rgba(255, 255, 255, 0.3),
-		rgba(255, 255, 255, 0.3)
-	), radial-gradient(circle, #0097ff, #0077be);
-	background-size: cover;
-	animation: move-background 20s ease-in-out infinite alternate;
-	animation-name: move-background;
-	animation-duration: 20s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
-	animation-direction: alternate;
-}
-
-@keyframes move-background {
-	from {
-		background-position: 0 0;
-	}
-	to {
-		background-position: 50% 50%;
-	}
-}
-
+        background-color: rgb(0, 150, 230);
+    }
 		h1 {
 			font-size: 36px;
 			text-align: center;
@@ -59,49 +38,44 @@
 	</style>
     <script>
     function openNewWindow(title, description, text) {
-      // Create a new window
-      var newWindow = window.open();
+  // Create a new window
+  var newWindow = window.open();
 
-      // Set the title of the new window
-      newWindow.document.title = title;
+  // Set the title of the new window
+  newWindow.document.title = title;
 
-      // Add the cool blue effect to the background
-      var style = newWindow.document.createElement('style');
-      style.innerHTML = `
-        body {
-          background-color: transparent;
-          background-image: linear-gradient(
-            rgba(255, 255, 255, 0.3),
-            rgba(255, 255, 255, 0.3)
-          ), radial-gradient(circle, #0097ff, #0077be);
-          background-size: cover;
-          animation: move-background 20s ease-in-out infinite alternate;
-        }
-
-        @keyframes move-background {
-          from {
-            background-position: 0 0;
-          }
-          to {
-            background-position: 50% 50%;
-          }
-        }
-      `;
-      newWindow.document.head.appendChild(style);
-
-      // Create the content for the new window
-      var content = "<h1>" + title + "</h1>";
-      content += "<p>" + description + "</p>";
-      content += "<textarea rows='30' cols='100' readonly>" + text + "</textarea>";
-
-      // Set the content of the new window
-      newWindow.document.body.innerHTML = content;
+  // Add the cool blue effect to the background
+  var style = newWindow.document.createElement('style');
+  style.innerHTML = `
+    body {
+      background-color: rgb(0, 150, 230);
     }
+
+    @keyframes move-background {
+      from {
+        background-position: 0 0;
+      }
+      to {
+        background-position: 50% 50%;
+      }
+    }
+  `;
+  newWindow.document.head.appendChild(style);
+
+  // Create the content for the new window
+  var content = "<h1>" + title + "</h1>";
+  content += "<p>" + description + "</p>";
+  content += "<textarea rows='50' cols='180' readonly>" + text + "</textarea>";
+
+  // Set the content of the new window
+  newWindow.document.body.innerHTML = content;
+}
 
     // URLs for the buttons
     var url1 = "https://www.youtube.com/@fallen7361";
     var url2 = "https://discord.gg/Z5rHscehpd";
     var url3 = "https://github.com/Destruc69/ForgeWurst-Fallen";
+    var url4 = "https://forge.wurstclient.net/";
 
 	</script>
 </head>
@@ -112,7 +86,9 @@
 <button onclick="window.location.href = url1;">YouTube</button>
 <button onclick="window.location.href = url2;">Discord</button>
 <button onclick="window.location.href = url3;">Github</button>
-<button onclick="openNewWindow('Dev Log', 'Thinking', 'Dont know what to add yet lol')">Dev Log</button>
+<button onclick="window.location.href = url4;">ForgeWurst</button>
+
+<button onclick="openNewWindow('About', 'whats this all about?', 'So, I created Fallen as a result of encountering issues with ForgeWurst, which was outdated and no longer working on the Forge version of Minecraft. As I wanted a solution to this problem, I decided to fork the ForgeWurst codebase and create Fallen. At the time, I had little to no coding experience, so it was a challenging and time-consuming process. Over the course of a year, I dedicated myself to learning Java and programming, which involved a lot of trial and error. I encountered setbacks and took breaks along the way, but I remained committed to the project and continued to work on it during the COVID-19 pandemic lockdown. Through my hard work and perseverance, I was able to expand my knowledge and imagination, learning not only Java but also HTML, which I used to create the Fallen website. Finally, on 08/10/21, Fallen was officially established, and since then, it has grown into a community of like-minded individuals who share a passion for modding Minecraft on the Forge platform.')">About</button>
 
 <!-- Add a list with titles and descriptions -->
 <h2>List</h2>
@@ -121,10 +97,10 @@
     <li onclick="openNewWindow('AutoClicker', 'Interacts with the block/entity you are looking at.' , 'not yet done')">AutoClicker</li>
     <li onclick="openNewWindow('CPvPViewer', 'View other people fighting.' , 'not yet done')">CPvPViewer</li>
     <li onclick="openNewWindow('FastBreak', 'Allows you to break blocks faster.' , 'not yet done')">FastBreak</li>
-    <li onclick="openNewWindow('Scaffold', 'thank you phobos my beloved' , 'not yet done')">Scaffold</li>
+    <li onclick="openNewWindow('Scaffold', 'Places blocks under you' , 'not yet done')">Scaffold</li>
     <li onclick="openNewWindow('MobSpawnESP', 'Highlights areas where mobs can spawn. yellow - mobs can spawn at night red - mobs can always spawn' , 'not yet done')">MobSpawnESP</li>
     <li onclick="openNewWindow('Radar', 'Shows the location of nearby entities. red - players orange - monsters green - animals gray - others' , 'not yet done')">Radar</li>
-    <li onclick="openNewWindow('Step', 'thank you cookie client by beloved.' , 'not yet done')">Step</li>
+    <li onclick="openNewWindow('Step', 'Makes stepping up blocks faster.' , 'not yet done')">Step</li>
     <li onclick="openNewWindow('PlayerESP', 'Highlights nearby players.' , 'not yet done')">PlayerESP</li>
     <li onclick="openNewWindow('HudModules', 'Use arrow keys and select move hud elements' , 'not yet done')">HudModules</li>
     <li onclick="openNewWindow('AntiLag', 'Working out of the pocket anti-lag (this anti lag is really simple).' , 'not yet done')">AntiLag</li>
@@ -169,7 +145,7 @@
     <li onclick="openNewWindow('FreeCam', 'Go outside of your body.' , 'not yet done')">FreeCam</li>
     <li onclick="openNewWindow('AutoWalk', 'Makes you walk automatically.' , 'not yet done')">AutoWalk</li>
     <li onclick="openNewWindow('Criticals', 'Get critical hits.' , 'not yet done')">Criticals</li>
-    <li onclick="openNewWindow('Nametags', 'Thank you gishcode my beloved.' , 'not yet done')">Nametags</li>
+    <li onclick="openNewWindow('Nametags', 'Shows above players head there name and armor stuff.' , 'not yet done')">Nametags</li>
     <li onclick="openNewWindow('FakeHackers', 'False report players with evidence!.' , 'not yet done')">FakeHackers</li>
     <li onclick="openNewWindow('PacketCanceler', 'Cancel packets that you desire!.' , 'not yet done')">PacketCanceler</li>
     <li onclick="openNewWindow('EntityFlight', 'Fly with Entitys/Ridables. Go down pressing S or your keybind to walk back' , 'not yet done')">EntityFlight</li>
