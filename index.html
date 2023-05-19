@@ -4,110 +4,161 @@
     <title>Fallen</title>
 
     <style>
-    body {
-        background-color: #1c1c1c;
-        color: #fff;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 16px;
-        line-height: 1.5;
-    }
+        body {
+    background-color: #1c1c1c;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
 
-    h1 {
-        font-size: 36px;
-        text-align: center;
-        margin-top: 50px;
-        color: #fff;
-        text-shadow: 2px 2px #000;
-    }
+h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 50px;
+    color: #fff;
+    text-shadow: 2px 2px #000;
+}
 
-    hr {
-        width: 50%;
-        height: 3px;
-        background-color: #0066CC;
-        margin: auto;
-        margin-top: 20px;
-        margin-bottom: 50px;
-        border: none;
-    }
+hr {
+    width: 50%;
+    height: 3px;
+    background-color: #0066CC;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    border: none;
+}
 
-    .btn-fallen:hover {
-        background-color: #005BA1;
-    }
+.btn-fallen {
+    background-color: #2c2c2c;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 10px auto;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out; /* Add a transition for smooth animation */
+}
 
-    .btn-fallen {
-        display: block;
-        width: 100%;
-        height: 50px;
-        font-size: 18px;
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        margin-bottom: 20px;
-        transition: background-color 0.3s;
-    }
-
-    li:hover {
-        color: #fff;
-    }
-
-    li {
-      display: inline-block; /* Displays items in a row */
-      margin-right: 10px; /* Adds some space between items */
-    }
-
-    .tooltip {
-        position: relative;
-    }
-
-    .tooltip:hover::before {
-        content: attr(data-tooltip);
-        position: absolute;
-        top: -30px;
-        left: 0;
-        background-color: black;
-        color: white;
-        padding: 5px;
-        border-radius: 5px;
-    }
+.btn-fallen:hover {
+    cursor: pointer;
+    transform: translateY(-5px); /* Add a transform to move the element */
+    background-color: #007bff; /* Change the background color on hover */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add a box-shadow for depth effect */
+}
 
 li {
-  color: white; /* Default color */
-  cursor: pointer;
+    display: inline-block; /* Displays items in a row */
+    margin-right: 10px; /* Adds some space between items */
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out; /* Add a transition for smooth animation */
 }
 
 li:hover {
-  color: #5F909C; /* Light blue color on hover */
+    color: #66b3ff; /* Change the color on hover */
+    animation: move-text 1s ease-in-out forwards; /* Add an animation on hover */
 }
 
-    textarea {
-        background-color: #262626;
-        border: none;
-        color: #fff;
-        padding: 10px;
-        margin-top: 20px;
-        font-size: 14px;
-        font-family: 'Courier New', Courier, monospace;
-        resize: none;
+@keyframes move-text {
+    from {
+        transform: translateY(0);
     }
-
-    .blue-effect {
-        background-color: rgb(0, 150, 220);
-        animation: move-background 20s ease-in-out infinite alternate;
-        background-size: 400% 400%;
+    to {
+        transform: translateY(-5px);
     }
+}
 
-    @keyframes move-background {
-        from {
-            background-position: 0 0;
+.tooltip {
+    position: relative;
+}
+
+.tooltip:hover::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -30px;
+    left: 0;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+textarea {
+    background-color: #262626;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+    resize: none;
+}
+
+.blue-effect {
+    background-color: rgb(0, 150, 220);
+    animation: move-background 20s ease-in-out infinite alternate;
+    background-size: 400% 400%;
+}
+
+@keyframes move-background {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 50% 50%;
+    }
+}
+
+    .btn-fallen {
+    background-color: #2c2c2c;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 10px auto;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.btn-fallen:hover {
+    cursor: pointer;
+}
+
+        #footer {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
         }
-        to {
-            background-position: 50% 50%;
-        }
-    }
 
+        #footer p {
+            margin: 0;
+        }
     </style>
-    <script>
+</head>
+<body>
+<h1>Fallen</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <button class="btn-fallen" onclick="window.location.href = 'https://www.youtube.com/@fallen7361';">YouTube</button>
+    </div>
+    <div class="col-md-6">
+        <button class="btn-fallen" onclick="window.location.href = 'https://discord.gg/Z5rHscehpd';">Discord</button>
+    </div>
+    <div class="col-md-6">
+        <button class="btn-fallen" onclick="window.location.href = 'https://github.com/Destruc69/ForgeWurst-Fallen';">Github</button>
+    </div>
+    <div class="col-md-6">
+        <button class="btn-fallen" onclick="window.location.href = 'https://forge.wurstclient.net/';">ForgeWurst</button>
+    </div>
+</div>
+
+<h2 style="text-align: center; color: white; margin-top: 50px; text-shadow: 2px 2px #000;">Module List</h2>
+
+<script>
     function openNewWindow(title, description, text) {
     // Create a new window
     var newWindow = window.open();
@@ -164,43 +215,6 @@ li:hover {
     var url4 = "https://forge.wurstclient.net/";
 
     </script>
-</head>
-<body>
-<h1>Fallen</h1>
-
-<style>
-    .btn-fallen {
-    background-color: #2c2c2c;
-    color: white;
-    border: none;
-    padding: 10px;
-    margin: 10px auto;
-    width: 100%;
-    font-size: 16px;
-    border-radius: 4px;
-}
-
-.btn-fallen:hover {
-    cursor: pointer;
-}
-</style>
-
-<div class="row">
-    <div class="col-md-6">
-        <button class="btn-fallen" onclick="window.location.href = 'https://www.youtube.com/@fallen7361';">YouTube</button>
-    </div>
-    <div class="col-md-6">
-        <button class="btn-fallen" onclick="window.location.href = 'https://discord.gg/Z5rHscehpd';">Discord</button>
-    </div>
-    <div class="col-md-6">
-        <button class="btn-fallen" onclick="window.location.href = 'https://github.com/Destruc69/ForgeWurst-Fallen';">Github</button>
-    </div>
-    <div class="col-md-6">
-        <button class="btn-fallen" onclick="window.location.href = 'https://forge.wurstclient.net/';">ForgeWurst</button>
-    </div>
-</div>
-
-<h2 style="text-align: center; color: white; margin-top: 50px; text-shadow: 2px 2px #000;">Module List</h2>
 
 <ul>
     <li onclick="openNewWindow('AutoClicker', 'Interacts with the block/entity you are looking at.' , 'not yet done')">AutoClicker</li>
@@ -341,3 +355,117 @@ li:hover {
     <li onclick="openNewWindow('setap', 'Set the target coords for the AutoPilot module. ')">setap</li>
     <li onclick="openNewWindow('addPoint', 'Adds a pointer at a coord. ')">addPoint</li>
 </ul>
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #1c1c1c;
+        color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .dropdown-button {
+        position: fixed;
+        top: 10px;
+        padding: 10px;
+        background-color: #333;
+        color: #fff;
+        cursor: pointer;
+        z-index: 9999;
+    }
+
+    #github-button {
+        right: 10px;
+    }
+
+    #html-button {
+        right: 90px;
+    }
+
+    .dropdown {
+        position: fixed;
+        top: 50px;
+        right: 10px;
+        width: auto;
+        max-height: 200px; /* Adjust the height as needed */
+        overflow: auto;
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        display: none;
+    }
+
+    .dropdown.show {
+        display: block;
+    }
+</style>
+</head>
+<body>
+<button id="github-button" class="dropdown-button">GitHub</button>
+<button id="html-button" class="dropdown-button">HTML</button>
+<div id="github-dropdown" class="dropdown">
+    <pre id="repo-info"></pre>
+</div>
+<div id="html-dropdown" class="dropdown">
+    <pre id="html-code"></pre>
+</div>
+
+<script>
+    var githubButton = document.getElementById("github-button");
+    var htmlButton = document.getElementById("html-button");
+    var githubDropdown = document.getElementById("github-dropdown");
+    var htmlDropdown = document.getElementById("html-dropdown");
+    var repoInfo = document.getElementById("repo-info");
+    var htmlCode = document.getElementById("html-code");
+
+    githubButton.addEventListener("click", function() {
+        githubDropdown.classList.toggle("show");
+        htmlDropdown.classList.remove("show");
+
+        if (githubDropdown.classList.contains("show")) {
+            // Make an API request to fetch GitHub repository information
+            fetch("https://api.github.com/repos/DeStRuC69/ForgeWurst-Fallen")
+                .then(response => response.json())
+                .then(data => {
+                    // Update the content of the dropdown with the fetched information
+                    repoInfo.textContent = JSON.stringify(data, null, 2);
+                })
+                .catch(error => {
+                    console.log("Error:", error);
+                });
+        }
+    });
+
+    htmlButton.addEventListener("click", function() {
+        htmlDropdown.classList.toggle("show");
+        githubDropdown.classList.remove("show");
+
+        if (htmlDropdown.classList.contains("show")) {
+            // Fetch the index.html file
+            fetch("index.html")
+                .then(response => response.text())
+                .then(data => {
+                    // Update the content of the dropdown with the retrieved HTML code
+                    htmlCode.textContent = data;
+                })
+                .catch(error => {
+                    console.log("Error:", error);
+                });
+        }
+    });
+</script>
+
+</body>
+</html>
