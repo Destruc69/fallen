@@ -59,7 +59,7 @@ li {
 
 li:hover {
     color: #66b3ff; /* Change the color on hover */
-    animation: move-text 1s ease-in-out forwards; /* Add an animation on hover */
+    animation: move-text 0.6s ease-in-out forwards; /* Add an animation on hover */
 }
 
 @keyframes move-text {
@@ -67,7 +67,7 @@ li:hover {
         transform: translateY(0);
     }
     to {
-        transform: translateY(-5px);
+        transform: translateY(-1px);
     }
 }
 
@@ -414,7 +414,6 @@ textarea {
 </head>
 <body>
 <button id="github-button" class="dropdown-button">GitHub</button>
-<button id="html-button" class="dropdown-button">HTML</button>
 <div id="github-dropdown" class="dropdown">
     <pre id="repo-info"></pre>
 </div>
