@@ -2,145 +2,157 @@
 <html>
 <head>
     <title>Fallen</title>
-
     <style>
-        body {
-    background-color: #1c1c1c;
-    color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-h1 {
-    font-size: 36px;
-    text-align: center;
-    margin-top: 50px;
-    color: #fff;
-    text-shadow: 2px 2px #000;
-}
-
-hr {
-    width: 50%;
-    height: 3px;
-    background-color: #0066CC;
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 50px;
-    border: none;
-}
-
-.btn-fallen {
-    background-color: #2c2c2c;
-    color: white;
-    border: none;
-    padding: 10px;
-    margin: 10px auto;
-    width: 100%;
-    font-size: 16px;
-    border-radius: 4px;
-    transition: all 0.3s ease-in-out; /* Add a transition for smooth animation */
-}
-
-.btn-fallen:hover {
-    cursor: pointer;
-    transform: translateY(-5px); /* Add a transform to move the element */
-    background-color: #007bff; /* Change the background color on hover */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add a box-shadow for depth effect */
-}
-
-li {
-    display: inline-block; /* Displays items in a row */
-    margin-right: 10px; /* Adds some space between items */
-    color: #fff;
-    cursor: pointer;
-    transition: color 0.3s ease-in-out; /* Add a transition for smooth animation */
-}
-
-li:hover {
-    color: #66b3ff; /* Change the color on hover */
-    animation: move-text 1s ease-in-out forwards; /* Add an animation on hover */
-}
-
-@keyframes move-text {
-    from {
-        transform: translateY(0);
+    body {
+        background-color: #1c1c1c;
+        color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        overflow-x: hidden;
     }
-    to {
-        transform: translateY(-5px);
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.5);
+        }
+        100% {
+            transform: scale(1);
+        }
     }
-}
 
-.tooltip {
-    position: relative;
-}
-
-.tooltip:hover::before {
-    content: attr(data-tooltip);
-    position: absolute;
-    top: -30px;
-    left: 0;
-    background-color: black;
-    color: white;
-    padding: 5px;
-    border-radius: 5px;
-}
-
-textarea {
-    background-color: #262626;
-    border: none;
-    color: #fff;
-    padding: 10px;
-    margin-top: 20px;
-    font-size: 14px;
-    font-family: 'Courier New', Courier, monospace;
-    resize: none;
-}
-
-.blue-effect {
-    background-color: rgb(0, 150, 220);
-    animation: move-background 20s ease-in-out infinite alternate;
-    background-size: 400% 400%;
-}
-
-@keyframes move-background {
-    from {
-        background-position: 0 0;
+    h1 {
+        font-size: 36px;
+        text-align: center;
+        margin-top: 50px;
+        color: #fff;
+        text-shadow: 2px 2px #000;
+        animation: pulse 2s infinite;
     }
-    to {
-        background-position: 50% 50%;
+
+    hr {
+        width: 50%;
+        height: 3px;
+        background-color: #0066CC;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 50px;
+        border: none;
     }
-}
 
     .btn-fallen {
-    background-color: #2c2c2c;
-    color: white;
-    border: none;
-    padding: 10px;
-    margin: 10px auto;
-    width: 100%;
-    font-size: 16px;
-    border-radius: 4px;
-}
+        background-color: #66b3ff;
+        color: white;
+        border: none;
+        padding: 10px;
+        margin: 10px auto;
+        width: 100%;
+        font-size: 16px;
+        border-radius: 4px;
+        transition: all 0.3s ease-in-out; /* Add a transition for smooth animation */
+    }
 
-.btn-fallen:hover {
-    cursor: pointer;
-}
+    .btn-fallen:hover {
+        cursor: pointer;
+        transform: translateY(-5px); /* Add a transform to move the element */
+        background-color: #007bff; /* Change the background color on hover */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add a box-shadow for depth effect */
+    }
 
-        #footer {
-            background-color: #333;
-            padding: 20px;
-            text-align: center;
+    li {
+        display: inline-block; /* Displays items in a row */
+        margin-right: 10px; /* Adds some space between items */
+        color: #fff;
+        cursor: pointer;
+        transition: color 0.3s ease-in-out; /* Add a transition for smooth animation */
+    }
+
+    li:hover {
+        color: #66b3ff; /* Change the color on hover */
+        animation: move-text 0.3s ease-in-out forwards; /* Add an animation on hover */
+    }
+
+    @keyframes move-text {
+        from {
+            transform: translateY(0);
         }
-
-        #footer p {
-            margin: 0;
+        to {
+            transform: translateY(-2px);
         }
-    </style>
+    }
+
+    .tooltip {
+        position: relative;
+    }
+
+    .tooltip:hover::before {
+        content: attr(data-tooltip);
+        position: absolute;
+        top: -30px;
+        left: 0;
+        background-color: black;
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    textarea {
+        background-color: #262626;
+        border: none;
+        color: #fff;
+        padding: 10px;
+        margin-top: 20px;
+        font-size: 14px;
+        font-family: 'Courier New', Courier, monospace;
+        resize: none;
+    }
+
+    .blue-effect {
+        background-color: rgb(0, 150, 220);
+        animation: move-background 20s ease-in-out infinite alternate;
+        background-size: 400% 400%;
+    }
+
+    @keyframes move-background {
+        from {
+            background-position: 0 0;
+        }
+        to {
+            background-position: 50% 50%;
+        }
+    }
+
+    .btn-fallen {
+        background-color: #2c2c2c;
+        color: white;
+        border: none;
+        padding: 10px;
+        margin: 10px auto;
+        width: 100%;
+        font-size: 16px;
+        border-radius: 4px;
+    }
+
+    .btn-fallen:hover {
+        cursor: pointer;
+    }
+
+    #footer {
+        background-color: #333;
+        padding: 20px;
+        text-align: center;
+    }
+
+    #footer p {
+        margin: 0;
+    }
+</style>
 </head>
 <body>
 <h1>Fallen</h1>
-
 <div class="row">
     <div class="col-md-6">
         <button class="btn-fallen" onclick="window.location.href = 'https://www.youtube.com/@fallen7361';">YouTube</button>
@@ -155,317 +167,198 @@ textarea {
         <button class="btn-fallen" onclick="window.location.href = 'https://forge.wurstclient.net/';">ForgeWurst</button>
     </div>
 </div>
-
 <h2 style="text-align: center; color: white; margin-top: 50px; text-shadow: 2px 2px #000;">Module List</h2>
-
 <script>
     function openNewWindow(title, description, text) {
-    // Create a new window
-    var newWindow = window.open();
+        // Create a new window
+        var newWindow = window.open();
 
-    // Set the title of the new window
-    newWindow.document.title = title;
+        // Set the title of the new window
+        newWindow.document.title = title;
 
-    // Add styles to the new window
-    var style = newWindow.document.createElement('style');
-    style.innerHTML = `
-        body {
-            background-color: #333;
-            color: #fff;
-            font-family: sans-serif;
-        }
-        h1 {
-            font-size: 36px;
-            text-align: center;
-            margin-top: 50px;
-            color: white;
-            text-shadow: 2px 2px #000;
-        }
-        p {
-            font-size: 20px;
-            text-align: center;
-            margin-top: 30px;
-            margin-bottom: 30px;
-        }
-        textarea {
-            width: 100%;
-            height: 500px;
-            padding: 10px;
-            background-color: #222;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-        }
-    `;
-    newWindow.document.head.appendChild(style);
+        // Add styles to the new window
+        var style = newWindow.document.createElement('style');
+        style.innerHTML = `
+            body {
+                background-color: #222;
+                color: #fff;
+                font-family: sans-serif;
+            }
+            h1 {
+                font-size: 36px;
+                text-align: center;
+                margin-top: 50px;
+                color: white;
+                text-shadow: 2px 2px #000;
+            }
+            p {
+                font-size: 20px;
+                text-align: center;
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+            textarea {
+                width: 100%;
+                height: 500px;
+                padding: 10px;
+                background-color: #333;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+            }
+        `;
+        newWindow.document.head.appendChild(style);
 
-    // Create the content for the new window
-    var content = "<h1>" + title + "</h1>";
-    content += "<p>" + description + "</p>";
-    content += "<textarea rows='50' cols='180' readonly>" + text + "</textarea>";
-
-    // Set the content of the new window
-    newWindow.document.body.innerHTML = content;
+        // Create the content for the new window
+        var content = "<h1>" + title + "</h1>";
+        content += "<p>" + description + "</p>";
+        content += "<textarea rows='50' cols='180' readonly>" + text + "</textarea>";
+        // Set the content of the new window
+        newWindow.document.body.innerHTML = content;
 }
 
-    // URLs for the buttons
-    var url1 = "https://www.youtube.com/@fallen7361";
-    var url2 = "https://discord.gg/Z5rHscehpd";
-    var url3 = "https://github.com/Destruc69/ForgeWurst-Fallen";
-    var url4 = "https://forge.wurstclient.net/";
-
-    </script>
+// URLs for the buttons
+var url1 = "https://www.youtube.com/@fallen7361";
+var url2 = "https://discord.gg/Z5rHscehpd";
+var url3 = "https://github.com/Destruc69/ForgeWurst-Fallen";
+var url4 = "https://forge.wurstclient.net/";
+</script>
+</body>
+</html>
 
 <ul>
-    <li onclick="openNewWindow('AutoClicker', 'Interacts with the block/entity you are looking at.' , 'not yet done')">AutoClicker</li>
-    <li onclick="openNewWindow('CPvPViewer', 'View other people fighting.' , 'not yet done')">CPvPViewer</li>
-    <li onclick="openNewWindow('FastBreak', 'Allows you to break blocks faster.' , 'not yet done')">FastBreak</li>
-    <li onclick="openNewWindow('Scaffold', 'Places blocks under you' , 'not yet done')">Scaffold</li>
-    <li onclick="openNewWindow('MobSpawnESP', 'Highlights areas where mobs can spawn. yellow - mobs can spawn at night red - mobs can always spawn' , 'not yet done')">MobSpawnESP</li>
-    <li onclick="openNewWindow('Radar', 'Shows the location of nearby entities. red - players orange - monsters green - animals gray - others' , 'not yet done')">Radar</li>
-    <li onclick="openNewWindow('Step', 'Makes stepping up blocks faster.' , 'not yet done')">Step</li>
-    <li onclick="openNewWindow('PlayerESP', 'Highlights nearby players.' , 'not yet done')">PlayerESP</li>
-    <li onclick="openNewWindow('HudModules', 'Use arrow keys and select move hud elements' , 'not yet done')">HudModules</li>
-    <li onclick="openNewWindow('AntiLag', 'Working out of the pocket anti-lag (this anti lag is really simple).' , 'not yet done')">AntiLag</li>
-    <li onclick="openNewWindow('ItemESP', 'Highlights nearby items.' , 'not yet done')">ItemESP</li>
-    <li onclick="openNewWindow('ChestStealer', 'Steals items from chest.' , 'not yet done')">ChestStealer</li>
-    <li onclick="openNewWindow('Disabler', 'Bypass anti cheats.' , 'not yet done')">Disabler</li>
-    <li onclick="openNewWindow('X-Ray', 'Allows you to see ores through walls.' , 'not yet done')">X-Ray</li>
-    <li onclick="openNewWindow('Console', 'Prints the console.' , 'not yet done')">Console</li>
-    <li onclick="openNewWindow('SkywarsCamper', 'Makes you impossible to find.' , 'not yet done')">SkywarsCamper</li>
-    <li onclick="openNewWindow('Tunneller', 'Automatically digs a tunnel. WARNING: Although this bot will try to avoid lava and other dangers, there is no guarantee that it won't die. Only send it out with gear that you don't mind losing.' , 'not yet done')">Tunneller</li>
-    <li onclick="openNewWindow('AutoFarm', 'Harvests and re-plants crops automatically. Works with wheat, carrots, potatoes, beetroots, pumpkins, melons, cacti, sugar canes and nether warts.' , 'not yet done')">AutoFarm</li>
-    <li onclick="openNewWindow('AntiCooldown', 'Cancels the packet to the client to start cooldown.' , 'not yet done')">AntiCooldown</li>
-    <li onclick="openNewWindow('DiscordRPC', 'Discord rich presence.' , 'not yet done')">DiscordRPC</li>
-    <li onclick="openNewWindow('AntiBot', 'Helps the client know the difference between bot and a real player and remove the bot.' , 'not yet done')">AntiBot</li>
-    <li onclick="openNewWindow('Follow', 'Bot that follows entitys.' , 'not yet done')">Follow</li>
-    <li onclick="openNewWindow('AntiFog', 'Removes fog.' , 'not yet done')">AntiFog</li>
-    <li onclick="openNewWindow('AutoItemFrameDupe', 'Preforms the ItemFrame dupe.' , 'not yet done')">AutoItemFrameDupe</li>
-    <li onclick="openNewWindow('InvMove', 'Allows you to move with your inventory.' , 'not yet done')">InvMove</li>
-    <li onclick="openNewWindow('BoatRam', 'Ram your boat as fast as possible!.' , 'not yet done')">BoatRam</li>
-    <li onclick="openNewWindow('SoundEventLogger', 'If we hear sound like ligtning, And is not you. it logs the pos as there is a player there. And other ways too' , 'not yet done')">SoundEventLogger</li>
-    <li onclick="openNewWindow('Blink', 'Suspends all motion updates while enabled.' , 'not yet done')">Blink</li>
-    <li onclick="openNewWindow('AutoTotem', 'Always use totem in off-hand.' , 'not yet done')">AutoTotem</li>
-    <li onclick="openNewWindow('Flight', 'I believe i can fly.' , 'not yet done')">Flight</li>
-    <li onclick="openNewWindow('EntitySpeed', 'Move faster with Entitys/Ridables.' , 'not yet done')">EntitySpeed</li>
-    <li onclick="openNewWindow('Speed', 'I Show Speed.' , 'not yet done')">Speed</li>
-    <li onclick="openNewWindow('LongJump', 'Jump far' , 'not yet done')">LongJump</li>
-    <li onclick="openNewWindow('FOV', 'Overide fov values.' , 'not yet done')">FOV</li>
-    <li onclick="openNewWindow('BedWarsBreaker', 'Break beds automatically for bed wars' , 'not yet done')">BedWarsBreaker</li>
-    <li onclick="openNewWindow('AntiAFK', 'Prevents getting kicked for idling' , 'not yet done')">AntiAFK</li>
-    <li onclick="openNewWindow('BowAimBot', 'When using a bow it will aim at entitys.' , 'not yet done')">BowAimBot</li>
-    <li onclick="openNewWindow('ClickGUI', '' , 'not yet done')">ClickGUI</li>
-    <li onclick="openNewWindow('NoFall', 'Prevents falling damage/falling.' , 'not yet done')">NoFall</li>
-    <li onclick="openNewWindow('AutoCrystal', 'Auto Crystal but for Killaura.' , 'not yet done')">AutoCrystal</li>
-    <li onclick="openNewWindow('OutlineESP', 'Renders entitys outlines for pitch and yaw' , 'not yet done')">OutlineESP</li>
-    <li onclick="openNewWindow('Killaura', 'Automatically attacks entities around you.' , 'not yet done')">Killaura</li>
-    <li onclick="openNewWindow('HitBox', 'Grow bounding boxes.' , 'not yet done')">HitBox</li>
-    <li onclick="openNewWindow('AutoAttack', '' , 'not yet done')">AutoAttack</li>
-    <li onclick="openNewWindow('Aimbot', 'Sends packets to look at entitys..' , 'not yet done')">Aimbot</li>
-    <li onclick="openNewWindow('AutoSneak', 'Makes you sneak automatically.' , 'not yet done')">AutoSneak</li>
-    <li onclick="openNewWindow('GodMode', 'Prevents damage.' , 'not yet done')">GodMode</li>
-    <li onclick="openNewWindow('HighlightESP', 'Renders enititys with a smooth white' , 'not yet done')">HighlightESP</li>
-    <li onclick="openNewWindow('FreeCam', 'Go outside of your body.' , 'not yet done')">FreeCam</li>
-    <li onclick="openNewWindow('AutoWalk', 'Makes you walk automatically.' , 'not yet done')">AutoWalk</li>
-    <li onclick="openNewWindow('Criticals', 'Get critical hits.' , 'not yet done')">Criticals</li>
-    <li onclick="openNewWindow('Nametags', 'Shows above players head there name and armor stuff.' , 'not yet done')">Nametags</li>
-    <li onclick="openNewWindow('FakeHackers', 'False report players with evidence!.' , 'not yet done')">FakeHackers</li>
-    <li onclick="openNewWindow('PacketCanceler', 'Cancel packets that you desire!.' , 'not yet done')">PacketCanceler</li>
-    <li onclick="openNewWindow('EntityFlight', 'Fly with Entitys/Ridables. Go down pressing S or your keybind to walk back' , 'not yet done')">EntityFlight</li>
-    <li onclick="openNewWindow('FakePlayer', 'Spawns a Fake Player.' , 'not yet done')">FakePlayer</li>
-    <li onclick="openNewWindow('AntiWeather', 'Removes rain, ect.' , 'not yet done')">AntiWeather</li>
-    <li onclick="openNewWindow('MobESP', 'Highlights nearby mobs.' , 'not yet done')">MobESP</li>
-    <li onclick="openNewWindow('Stability', 'Hold you entirely still when on ground.' , 'not yet done')">Stability</li>
-    <li onclick="openNewWindow('NoSound', 'No sounds allowed.' , 'not yet done')">NoSound</li>
-    <li onclick="openNewWindow('AntiSpam', 'Blocks chat spam by adding a counter to repeated messages.' , 'not yet done')">AntiSpam</li>
-    <li onclick="openNewWindow('AntiKick', 'Prevents kick exploits.' , 'not yet done')">AntiKick</li>
-    <li onclick="openNewWindow('Phase', 'Allows you too go through blocks.' , 'not yet done')">Phase</li>
-    <li onclick="openNewWindow('Timer', 'Changes the speed of almost everything.' , 'not yet done')">Timer</li>
-    <li onclick="openNewWindow('YawLock', 'Locks your yaw.' , 'not yet done')">YawLock</li>
-    <li onclick="openNewWindow('FastLadder', 'Allows you to climb up ladders faster.' , 'not yet done')">FastLadder</li>
-    <li onclick="openNewWindow('PacketLogger', 'See what packets the client is sending and recieving.' , 'not yet done')">PacketLogger</li>
-    <li onclick="openNewWindow('Nuker', 'Automatically breaks blocks around you.' , 'not yet done')">Nuker</li>
-    <li onclick="openNewWindow('ServerCrasher', 'Lots of methods to crash a server.' , 'not yet done')">ServerCrasher</li>
-    <li onclick="openNewWindow('Anchor', 'Fall over a hole faster and instantly.' , 'not yet done')">Anchor</li>
-    <li onclick="openNewWindow('ReachPlus', 'Creative gamemode reach.' , 'not yet done')">ReachPlus</li>
-    <li onclick="openNewWindow('ClientSideFixer', 'Max build height, ect  client sided ' , 'not yet done')">ClientSideFixer</li>
-    <li onclick="openNewWindow('Giant', 'Makes you really big.' , 'not yet done')">Giant</li>
-    <li onclick="openNewWindow('Peek', 'Shows you whats inside a shulker, thank you spect client by beloved.' , 'not yet done')">Peek</li>
-    <li onclick="openNewWindow('Fullbright', 'Allows you to see in the dark.' , 'not yet done')">Fullbright</li>
-    <li onclick="openNewWindow('Surround', 'Places blocks around you, ideal for crystal pvp.' , 'not yet done')">Surround</li>
-    <li onclick="openNewWindow('AutoSwim', 'Makes you swim automatically.' , 'not yet done')">AutoSwim</li>
-    <li onclick="openNewWindow('StashFinder', 'Logs chunks with chests/shulkers/enderchests.' , 'not yet done')">StashFinder</li>
-    <li onclick="openNewWindow('AutoSprint', 'Makes you sprint automatically.' , 'not yet done')">AutoSprint</li>
-    <li onclick="openNewWindow('FastFall', 'Fall fatser when you in the air.' , 'not yet done')">FastFall</li>
-    <li onclick="openNewWindow('AutoArmor', 'Manages your armor automatically.' , 'not yet done')">AutoArmor</li>
-    <li onclick="openNewWindow('NCPFly', 'Fly around with packets (ncp fly).' , 'not yet done')">NCPFly</li>
-    <li onclick="openNewWindow('AutoTool', 'Automatically equips the fastest applicable tool in your hotbar when you try to break a block.' , 'not yet done')">AutoTool</li>
-    <li onclick="openNewWindow('AntiBlockLag', 'Syncs block breaking with server.' , 'not yet done')">AntiBlockLag</li>
-    <li onclick="openNewWindow('AntiSwing', 'Cancels animation packets server-side.' , 'not yet done')">AntiSwing</li>
-    <li onclick="openNewWindow('AntiHunger', 'Walk, its easier.' , 'not yet done')">AntiHunger</li>
-    <li onclick="openNewWindow('Glide', 'Makes you glide down slowly when falling.' , 'not yet done')">Glide</li>
-    <li onclick="openNewWindow('ChunkKeeper', 'Keeps chunks you rendered to stay rendered.' , 'not yet done')">ChunkKeeper</li>
-    <li onclick="openNewWindow('AutoFish', 'Automatically catches fish using your best fishing rod. If it finds a better rod while fishing, it will automatically switch to it.' , 'not yet done')">AutoFish</li>
-    <li onclick="openNewWindow('NoSlowDown', 'No time to slow down when eating' , 'not yet done')">NoSlowDown</li>
-    <li onclick="openNewWindow('AntiVoid', 'Prevents you from falling in the void.' , 'not yet done')">AntiVoid</li>
-    <li onclick="openNewWindow('NoKnockBack', 'Prevents knockback.' , 'not yet done')">NoKnockBack</li>
-    <li onclick="openNewWindow('Jesus', 'Allows you to walk on water. Jesus used this hack ~2000 years ago.' , 'not yet done')">Jesus</li>
-    <li onclick="openNewWindow('Spider', 'Allows you to climb up walls like a spider.' , 'not yet done')">Spider</li>
-    <li onclick="openNewWindow('FastPlace', 'Allows you to place blocks 5 times faster.' , 'not yet done')">FastPlace</li>
-    <li onclick="openNewWindow('NoHurtCam', 'Removes hurt animation.' , 'not yet done')">NoHurtCam</li>
-    <li onclick="openNewWindow('NoWeb', 'Prevents you from getting slowed down in webs.' , 'not yet done')">NoWeb</li>
-    <li onclick="openNewWindow('NewChunks', 'Shows if chunk has never been loaded before.' , 'not yet done')">NewChunks</li>
-    <li onclick="openNewWindow('ChestESP', 'Highlights nearby chests. green - normal chests orange - trapped chests cyan - ender chests' , 'not yet done')">ChestESP</li>
-    <li onclick="openNewWindow('ElytraFlight', 'Fly with elytras.' , 'not yet done')">ElytraFlight</li>
-    <li onclick="openNewWindow('NoCom', 'A NoCom clone. ONLY WORKS ON OLD VERSIONS OF SERVERS' , 'not yet done')">NoCom</li>
-    <li onclick="openNewWindow('HackerDetector', 'Show and tell you if we suspect hackers in your game other than you.' , 'not yet done')">HackerDetector</li>
-    <li onclick="openNewWindow('PacketSender', 'Send packets that you desire!.' , 'not yet done')">PacketSender</li>
-    <li onclick="openNewWindow('Pointer', 'Lets you save temporary points.' , 'not yet done')">Pointer</li>
-    <li onclick="openNewWindow('AutoPilot', 'Simple automation for navigation.' , 'not yet done')">AutoPilot</li>
-    <li onclick="openNewWindow('ArmModel', 'Change arm model pos' , 'not yet done')">ArmModel</li>
+    <li onclick="openNewWindow('AutoClicker', 'Interacts with the block/entity you are looking at.', 'Category: PLAYER\n\n[]')">AutoClicker </li>
+    <li onclick="openNewWindow('CPvPViewer', 'View other people fighting.', 'Category: RENDER\n\n[]')">CPvPViewer </li>
+    <li onclick="openNewWindow('FastBreak', 'Allows you to break blocks faster.', 'Category: WORLD\n\n[net.wurstclient.forge.settings.CheckboxSetting@2d8a62a9]')">FastBreak </li>
+    <li onclick="openNewWindow('Scaffold', 'Place blocks underneath you automatically.', 'Category: WORLD\n\n[net.wurstclient.forge.settings.CheckboxSetting@63c8550f, net.wurstclient.forge.settings.CheckboxSetting@61625dd6]')">Scaffold </li>
+    <li onclick="openNewWindow('MobSpawnESP', 'Highlights areas where mobs can spawn. yellow - mobs can spawn at night red - mobs can always spawn', 'Category: RENDER\n\n[net.wurstclient.forge.settings.EnumSetting@3cfd203e, net.wurstclient.forge.settings.SliderSetting@429c8222]')">MobSpawnESP </li>
+    <li onclick="openNewWindow('Radar', 'Shows the location of nearby entities. red - players orange - monsters green - animals gray - others ', 'Category: RENDER\n\n[net.wurstclient.forge.settings.SliderSetting@63ddc753, net.wurstclient.forge.settings.CheckboxSetting@10a2aa13, net.wurstclient.forge.settings.CheckboxSetting@450b94e9, net.wurstclient.forge.settings.CheckboxSetting@632093f8, net.wurstclient.forge.settings.CheckboxSetting@6e4a2790, net.wurstclient.forge.settings.CheckboxSetting@6b3dfa78, net.wurstclient.forge.settings.CheckboxSetting@7208872a]')">Radar </li>
+    <li onclick="openNewWindow('Step', 'Allows you to step up blocks instantly.', 'Category: MOVEMENT\n\n[net.wurstclient.forge.settings.EnumSetting@15d075c0, net.wurstclient.forge.settings.SliderSetting@2a19b64d]')">Step </li>
+    <li onclick="openNewWindow('PlayerESP', 'Highlights nearby players.', 'Category: RENDER\n\n[net.wurstclient.forge.settings.EnumSetting@2e73674c, net.wurstclient.forge.settings.CheckboxSetting@18f4947f, net.wurstclient.forge.settings.CheckboxSetting@e9c9cd4]')">PlayerESP </li>
+    <li onclick="openNewWindow('HudModules', 'Use arrow keys and select move hud elements', 'Category: RENDER\n\n[net.wurstclient.forge.settings.CheckboxSetting@69d0e894, net.wurstclient.forge.settings.CheckboxSetting@5cacbbe5, net.wurstclient.forge.settings.CheckboxSetting@60479b63]')">HudModules </li>
+    <li onclick="openNewWindow('AntiLag', 'Working out of the pocket anti-lag (this anti lag is really simple).', 'Category: WORLD\n\n[]')">AntiLag </li>
+    <li onclick="openNewWindow('ItemESP', 'Highlights nearby items.', 'Category: RENDER\n\n[net.wurstclient.forge.settings.CheckboxSetting@ad7d183, net.wurstclient.forge.settings.EnumSetting@642d1c05]')">ItemESP </li>
+    <li onclick="openNewWindow('ChestStealer', 'Steals items from chest.', 'Category: PLAYER\n\n[]')">ChestStealer </li>
+    <li onclick="openNewWindow('Disabler', 'Bypass anti cheats.', 'Category: PLAYER\n\n[net.wurstclient.forge.settings.EnumSetting@5de7e0f6]')">Disabler </li>
+    <li onclick="openNewWindow('X-Ray', 'Allows you to see ores through walls.', 'Category: RENDER\n\n[net.wurstclient.forge.settings.BlockListSetting@127f4aa]')">X-Ray </li>
+    <li onclick="openNewWindow('Tunneller', 'Automatically digs a tunnel. WARNING: Although this bot will try to avoid lava and other dangers, there is no guarantee that it won't die. Only send it out with gear that you don't mind losing.', 'Category: PATHING\n\n[net.wurstclient.forge.settings.EnumSetting@354866c4, net.wurstclient.forge.settings.SliderSetting@3909995c, net.wurstclient.forge.settings.CheckboxSetting@5b8b3edb]')">Tunneller </li>
+    <li onclick="openNewWindow('AutoFarm', 'Harvests and re-plants crops automatically. Works with wheat, carrots, potatoes, beetroots, pumpkins, melons, cacti, sugar canes and nether warts.', 'Category: WORLD\n\n[net.wurstclient.forge.settings.SliderSetting@653703a4]')">AutoFarm </li>
+    <li onclick="openNewWindow('AntiCooldown', 'Cancels the packet to the client to start cooldown.', 'Category: PLAYER\n\n[]')">AntiCooldown </li>
+    <li onclick="openNewWindow('DiscordRPC', 'Discord rich presence.', 'Category: PLAYER\n\n[]')">DiscordRPC </li>
+    <li onclick="openNewWindow('AntiBot', 'He ps the client know the difference between bot and a real player and remove the bot.', 'Category: COMBAT\n\n[net.wurstclient.forge.settings.CheckboxSetting@133f2780, net.wurstclient.forge.settings.CheckboxSetting@66098fc2, net.wurstclient.forge.settings.CheckboxSetting@64f6183e, net.wurstclient.forge.settings.CheckboxSetting@39810d27, net.wurstclient.forge.settings.CheckboxSetting@53e83eb0, net.wurstclient.forge.settings.CheckboxSetting@79b5cc90]')">AntiBot </li>
+    <li onclick="openNewWindow('Follow', 'Bot that follows entitys.', 'Category: MOVEMENT\n\n[net.wurstclient.forge.settings.SliderSetting@2dd60c70, net.wurstclient.forge.settings.CheckboxSetting@1c8fc4d8]')">Follow </li>
+    <li onclick="openNewWindow('AutoLeave', 'Leaves the game once a condition is true.', 'Category: PLAYER\n\n[net.wurstclient.forge.settings.EnumSetting@e006447]')">AutoLeave </li>
+    <li onclick="openNewWindow('AntiFog', 'Removes fog.', 'Category: WORLD\n\n[]')">AntiFog </li>
+    <li onclick="openNewWindow('AutoItemFrameDupe', 'Preforms the ItemFrame dupe.', 'Category: PLAYER\n\n[net.wurstclient.forge.settings.EnumSetting@5986e85b]')">AutoItemFrameDupe </li>
+    <li onclick="openNewWindow('InvMove', 'Allows you to move with your inventory.', 'Category: MOVEMENT\n\n[net.wurstclient.forge.settings.EnumSetting@442eca97]')">InvMove </li>
+    <li onclick="openNewWindow('SoundEventLogger', 'If we hear sound like ligtning, And is not you. it logs the pos as there is a player there. And other ways too', 'Category: PLAYER\n\n[]')">SoundEventLogger </li>
+    <li onclick="openNewWindow('Blink', 'Suspends all motion updates while enabled.', 'Category: MOVEMENT\n\n[net.wurstclient.forge.settings.SliderSetting@26e57fce]')">Blink </li>
+    <li onclick="openNewWindow('Damage', 'Damages the player.', 'Category: PLAYER\n\n[]')">Damage </li>
+    <li onclick="openNewWindow('AutoTotem', 'Always use totem in off-hand.', 'Category: COMBAT\n\n[]')">AutoTotem </li>
+    <li onclick="openNewWindow('Flight', 'Allows you to fly.', 'Category: MOVEMENT\n\n[net.wurstclient.forge.settings.EnumSetting@2b4a1509, net.wurstclient.forge.settings.SliderSetting@4560e40b]')">Flight </li>
+    <li onclick="openNewWindow('EntitySpeed', 'Move faster with Entitys/Ridables.', 'Category: MOVEMENT\n\n[net.wurstclient.forge.settings.SliderSetting@77a8f442, net.wurstclient.forge.settings.CheckboxSetting@7a3eee76]')">EntitySpeed </li>
+    <li onclick="openNewWindow('Speed', 'I Show Speed', 'Category: MOVEMENT\n\n[net.wurstclient.forge.settings.SliderSetting@1a74e65, net.wurstclient.forge.settings.CheckboxSetting@4325a2e6]')">Speed </li>
+    <li onclick="openNewWindow('LongJump', 'Jump far', 'Category: MOVEMENT\n\n[net.wurstclient.forge.settings.EnumSetting@731f4424]')">LongJump </li>
+    <li onclick="openNewWindow('FOV', 'Overide fov values.', 'Category: RENDER\n\n[net.wurstclient.forge.settings.SliderSetting@7e5f596f]')">FOV </li>
+    <li onclick="openNewWindow('AntiAFK', 'Prevents getting kicked for idling', 'Category: MOVEMENT\n\n[net.wurstclient.forge.settings.CheckboxSetting@4530e4a7]')">AntiAFK </li>
+    <li onclick="openNewWindow('BowAimBot', 'When using a bow it will aim at entitys.', 'Category: COMBAT\n\n[]')">BowAimBot </li>
+    <li onclick="openNewWindow('ClickGUI', '', 'Category: null\n\n[net.wurstclient.forge.settings.SliderSetting@2b6c5c75, net.wurstclient.forge.settings.SliderSetting@22db1358, net.wurstclient.forge.settings.SliderSetting@26cba24d, net.wurstclient.forge.settings.SliderSetting@649c7fef, net.wurstclient.forge.settings.SliderSetting@2dda18fd, net.wurstclient.forge.settings.SliderSetting@57618fcd, net.wurstclient.forge.settings.SliderSetting@2c4386a6, net.wurstclient.forge.settings.CheckboxSetting@2b27e7c6, net.wurstclient.forge.settings.CheckboxSetting@56c70faf, net.wurstclient.forge.settings.CheckboxSetting@d03ed5d, net.wurstclient.forge.settings.SliderSetting@3d452ced, net.wurstclient.forge.settings.SliderSetting@2948e554, net.wurstclient.forge.settings.SliderSetting@471c2da5, net.wurstclient.forge.settings.SliderSetting@5567591e, net.wurstclient.forge.settings.SliderSetting@4151251b, net.wurstclient.forge.settings.SliderSetting@2f5d1a20, net.wurstclient.forge.settings.SliderSetting@90a7b6b, net.wurstclient.forge.settings.CheckboxSetting@664a6cfd, net.wurstclient.forge.settings.SliderSetting@2e7be4d2, net.wurstclient.forge.settings.SliderSetting@69b07727, net.wurstclient.forge.settings.SliderSetting@33bb8859]')">ClickGUI </li>
+    <li onclick="openNewWindow('NoFall', 'Prevents falling damage/falling.', 'Category: PLAYER\n\n[net.wurstclient.forge.settings.EnumSetting@6a33757, net.wurstclient.forge.settings.SliderSetting@770f0e25, net.wurstclient.forge.settings.EnumSetting@1dec46ac]')">NoFall </li>
+    <li onclick="openNewWindow('AutoCrystal', 'Auto Crystal but for Killaura.', 'Category: COMBAT\n\n[]')">AutoCrystal </li>
+    <li onclick="openNewWindow('OutlineESP', 'Renders entitys outlines for pitch and yaw', 'Category: RENDER\n\n[]')">OutlineESP </li>
+    <li onclick="openNewWindow('Killaura', 'Automatically attacks entities around you.', 'Category: COMBAT\n\n[]')">Killaura </li>
+    <li onclick="openNewWindow('HitBox', 'Grow bounding boxes.', 'Category: COMBAT\n\n[net.wurstclient.forge.settings.SliderSetting@727aec08]')">HitBox </li>
+    <li onclick="openNewWindow('AutoAttack', '', 'Category: PLAYER\n\n[]')">AutoAttack </li>
+    <li onclick="openNewWindow('Aimbot', 'Sends packets to look at entitys..', 'Category: COMBAT\n\n[]')">Aimbot </li>
+    <li onclick="openNewWindow('FastBow', 'Shoot bows faster.', 'Category: COMBAT\n\n[]')">FastBow </li>
+    <li onclick="openNewWindow('AutoSneak', 'Makes you sneak automatically.', 'Category: MOVEMENT\n\n[net.wurstclient.forge.settings.EnumSetting@6dfc649f]')">AutoSneak </li>
+    <li onclick="openNewWindow('GodMode', 'Prevents damage.', 'Category: PLAYER\n\n[net.wurstclient.forge.settings.EnumSetting@628d3123]')">GodMode </li>
+    <li onclick="openNewWindow('HighlightESP', 'Renders enititys with a smooth white', 'Category: RENDER\n\n[]')">HighlightESP</li>
+    <li onclick="openNewWindow('FreeCam', 'Go outside of your body.', 'Category: RENDER\n\n[net.wurstclient.forge.settings.SliderSetting@1dabc2f8, net.wurstclient.forge.settings.CheckboxSetting@389467e9]')">FreeCam </li>
+    <li onclick="openNewWindow('AutoWalk', 'Makes you walk automatically.', 'Category: MOVEMENT\n\n[]')">AutoWalk </li>
+    <li onclick="openNewWindow('Criticals', 'Get critical hits.', 'Category: COMBAT\n\n[]')">Criticals </li>
+    <li onclick="openNewWindow('AntiCollide', 'Prevent colliding with players', 'Category: PLAYER\n\n[]')">AntiCollide </li>
+    <li onclick="openNewWindow('Nametags', 'Thank you gishcode my beloved.', 'Category: RENDER\n\n[]')">Nametags </li>
+    <li onclick="openNewWindow('FakeHackers', 'False report players with evidence!.', 'Category: PLAYER\n\n[net.wurstclient.forge.settings.CheckboxSetting@36c234f8, net.wurstclient.forge.settings.CheckboxSetting@3dcd1f2a, net.wurstclient.forge.settings.CheckboxSetting@7eb2a669]')">FakeHackers </li>
+    <li onclick="openNewWindow('PacketCanceler', 'Cancel packets that you desire!.', 'Category: PLAYER\n\n[net.wurstclient.forge.settings.CheckboxSetting@65023d79, net.wurstclient.forge.settings.CheckboxSetting@4240b0d5, net.wurstclient.forge.settings.CheckboxSetting@1721d3f8, net.wurstclient.forge.settings.CheckboxSetting@7ccbae9b, net.wurstclient.forge.settings.CheckboxSetting@8d6ad8e, net.wurstclient.forge.settings.CheckboxSetting@4fd77259, net.wurstclient.forge.settings.CheckboxSetting@56f0c648]')">PacketCanceler </li>
+    <li onclick="openNewWindow('EntityFlight', 'Fly with Entitys/Ridables. Go down pressing S or your keybind to walk back', 'Category: MOVEMENT\n\n[net.wurstclient.forge.settings.SliderSetting@77ee057b, net.wurstclient.forge.settings.SliderSetting@4ae97cd5, net.wurstclient.forge.settings.CheckboxSetting@3ed88a6b, net.wurstclient.forge.settings.CheckboxSetting@6ecac97e]')">EntityFlight </li>
+    <li onclick="openNewWindow('FakePlayer', 'Spawns a Fake Player.', 'Category: PLAYER\n\n[]')">FakePlayer </li>
+    <li onclick="openNewWindow('Anti23Weather', 'Removes rain, ect.', 'Category: WORLD\n\n[]')">AntiWeather </li>
+    <li onclick="openNewWindow('MobESP', 'Highlights nearby mobs.', 'Category: RENDER\n\n[net.wurstclient.forge.settings.EnumSetting@6988cc01, net.wurstclient.forge.settings.CheckboxSetting@68861a31]')">MobESP </li>
+    <li onclick="openNewWindow('Stability', 'Hold you entirely still when on ground.', 'Category: MOVEMENT\n\n[net.wurstclient.forge.settings.CheckboxSetting@12f74e98]')">Stability </li>
+    <li onclick="openNewWindow('NoSound', 'No sounds allowed.', 'Category: PLAYER\n\n[]')">NoSound </li>
+    <li onclick="openNewWindow('AntiSpam', 'Blocks chat spam by adding a counter to repeated messages.', 'Category: PLAYER\n\n[]')">AntiSpam </li>
+    <li onclick="openNewWindow('AntiKick', 'Prevents kick exploits.', 'Category: PLAYER\n\n[]')">AntiKick </li>
+    <li onclick="openNewWindow('Phase', 'Allows you too go through blocks.', 'Category: MOVEMENT\n\n[]')">Phase </li>
+    <li onclick="openNewWindow('Timer', 'Changes the speed of almost everything.', 'Category: WORLD\n\n[net.wurstclient.forge.settings.SliderSetting@2acee481]')">Timer </li>
+    <li onclick="openNewWindow('HoleESP', 'Renders holes.', 'Category: RENDER\n\n[net.wurstclient.forge.settings.SliderSetting@509cd1d, net.wurstclient.forge.settings.SliderSetting@5d06081f, net.wurstclient.forge.settings.SliderSetting@75ad0ea9]')">HoleESP </li>
+    <li onclick="openNewWindow('YawLock', 'Locks your yaw.', 'Category: MOVEMENT\n\n[]')">YawLock </li>
+    <li onclick="openNewWindow('FastLadder', 'Allows you to climb up ladders faster.', 'Category: MOVEMENT\n\n[]')">FastLadder </li>
+    <li onclick="openNewWindow('BoatTank', 'Turns your boat into a tank.', 'Category: WORLD\n\n[]')">BoatTank </li>
+    <li onclick="openNewWindow('PacketLogger', 'See what packets the client is sending and recieving.', 'Category: PLAYER\n\n[]')">PacketLogger </li>
+    <li onclick="openNewWindow('Nuker', 'Automatically breaks blocks around you.', 'Category: WORLD\n\n[net.wurstclient.forge.settings.SliderSetting@281a0671, net.wurstclient.forge.settings.EnumSetting@6330474a, net.wurstclient.forge.settings.CheckboxSetting@e1bfdc3]')">Nuker </li>
+    <li onclick="openNewWindow('Trajectory', 'Renders the path at which items/entitys will fall/move.', 'Category: RENDER\n\n[net.wurstclient.forge.settings.SliderSetting@13de62ef]')">Trajectory </li>
+    <li onclick="openNewWindow('ServerCrasher', 'Lots of methods to crash a server.', 'Category: WORLD\n\n[net.wurstclient.forge.settings.SliderSetting@6b0fc76b, net.wurstclient.forge.settings.CheckboxSetting@ae4c757, net.wurstclient.forge.settings.EnumSetting@5bc0d62d, net.wurstclient.forge.settings.CheckboxSetting@3be91ea0]')">ServerCrasher </li>
+    <li onclick="openNewWindow('Anchor', 'Fall over a hole faster and instantly.', 'Category: COMBAT\n\n[net.wurstclient.forge.settings.EnumSetting@2e48b229]')">Anchor </li>
+    <li onclick="openNewWindow('ReachPlus', 'Extend your reach distance.', 'Category: COMBAT\n\n[net.wurstclient.forge.settings.SliderSetting@2ba06c8]')">ReachPlus </li>
+    <li onclick="openNewWindow('ClientSideFixer', 'Max build height, ect [client sided]', 'Category: PLAYER\n\n[]')">ClientSideFixer </li>
+    <li onclick="openNewWindow('Giant', 'Makes you really big.', 'Category: PLAYER\n\n[net.wurstclient.forge.settings.SliderSetting@5f16d90c, net.wurstclient.forge.settings.SliderSetting@2c79d050]')">Giant </li>
+    <li onclick="openNewWindow('Peek', 'Shows you whats inside a shulker, thank you spect client by beloved.', 'Category: RENDER\n\n[]')">Peek </li>
+    <li onclick="openNewWindow('Fullbright', 'Allows you to see in the dark.', 'Category: RENDER\n\n[]')">Fullbright </li>  <li onclick="openNewWindow('Surround', 'Places blocks around you, ideal for crystal pvp.', 'Category: COMBAT\n\n[net.wurstclient.forge.settings.CheckboxSetting@474bf60c]')">Surround </li>
+    <li onclick="openNewWindow('AutoSwim', 'Makes you swim automatically.', 'Category: MOVEMENT\n\n[net.wurstclient.forge.settings.EnumSetting@1595246b]')">AutoSwim </li>
+    <li onclick="openNewWindow('StashFinder', 'Logs chunks with chests/shulkers/enderchests.', 'Category: WORLD\n\n[net.wurstclient.forge.settings.SliderSetting@7ca2516c]')">StashFinder </li>
+    <li onclick="openNewWindow('AutoSprint', 'Makes you sprint automatically.', 'Category: MOVEMENT\n\n[net.wurstclient.forge.settings.EnumSetting@1ebbf5f8]')">AutoSprint </li>
+    <li onclick="openNewWindow('FastFall', 'Fall fatser when you in the air.', 'Category: MOVEMENT\n\n[net.wurstclient.forge.settings.EnumSetting@6d88bb5, net.wurstclient.forge.settings.SliderSetting@3a524179]')">FastFall </li>
+    <li onclick="openNewWindow('AutoArmor', 'Manages your armor automatically.', 'Category: COMBAT\n\n[net.wurstclient.forge.settings.CheckboxSetting@54155e6e, net.wurstclient.forge.settings.CheckboxSetting@15407521, net.wurstclient.forge.settings.SliderSetting@5707d11f]')">AutoArmor </li>
+    <li onclick="openNewWindow('AutoTool', 'Automatically equips the fastest applicable tool in your hotbar when you try to break a block.', 'Category: WORLD\n\n[net.wurstclient.forge.settings.CheckboxSetting@7ff61b0f, net.wurstclient.forge.settings.CheckboxSetting@1eedcb1, net.wurstclient.forge.settings.CheckboxSetting@171158d0]')">AutoTool </li>
+    <li onclick="openNewWindow('AntiBlockLag', 'Syncs block breaking with server.', 'Category: WORLD\n\n[]')">AntiBlockLag </li>
+    <li onclick="openNewWindow('AntiSwing', 'Cancels animation packets server-side.', 'Category: COMBAT\n\n[]')">AntiSwing </li>
+    <li onclick="openNewWindow('AntiHunger', 'Walk, its easier.', 'Category: MOVEMENT\n\n[net.wurstclient.forge.settings.CheckboxSetting@7e77ec04, net.wurstclient.forge.settings.CheckboxSetting@3196aea6]')">AntiHunger </li>
+    <li onclick="openNewWindow('Glide', 'Makes you glide down slowly when falling.', 'Category: MOVEMENT\n\n[net.wurstclient.forge.settings.EnumSetting@466ae771]')">Glide </li>
+    <li onclick="openNewWindow('ChunkKeeper', 'Keeps chunks you rendered to stay rendered.', 'Category: RENDER\n\n[]')">ChunkKeeper </li>
+    <li onclick="openNewWindow('AutoFish', 'Automatically catches fish using your best fishing rod. If it finds a better rod while fishing, it will automatically switch to it.', 'Category: WORLD\n\n[net.wurstclient.forge.settings.SliderSetting@5ba0e0b4, net.wurstclient.forge.settings.CheckboxSetting@1a763008]')">AutoFish </li>
+    <li onclick="openNewWindow('NoSlowDown', 'No time to slow down when eating', 'Category: MOVEMENT\n\n[net.wurstclient.forge.settings.CheckboxSetting@1e915e7e, net.wurstclient.forge.settings.CheckboxSetting@fd173b2, net.wurstclient.forge.settings.CheckboxSetting@532887bc, net.wurstclient.forge.settings.CheckboxSetting@78f51ba1, net.wurstclient.forge.settings.CheckboxSetting@6c83c86f, net.wurstclient.forge.settings.CheckboxSetting@68cb7aae, net.wurstclient.forge.settings.CheckboxSetting@7f49156c]')">NoSlowDown </li>
+    <li onclick="openNewWindow('AntiVoid', 'Prevents you from falling in the void.', 'Category: MOVEMENT\n\n[]')">AntiVoid </li>
+    <li onclick="openNewWindow('NoKnockBack', 'Prevents knockback.', 'Category: COMBAT\n\n[net.wurstclient.forge.settings.CheckboxSetting@2f312137]')">NoKnockBack </li>
+    <li onclick="openNewWindow('Animations', 'Animations, explains its self.', 'Category: PLAYER\n\n[net.wurstclient.forge.settings.SliderSetting@5d03540e, net.wurstclient.forge.settings.SliderSetting@6eae5b0a, net.wurstclient.forge.settings.SliderSetting@597bc1c6, net.wurstclient.forge.settings.SliderSetting@7fe56b47, net.wurstclient.forge.settings.SliderSetting@3881f391, net.wurstclient.forge.settings.SliderSetting@24eb8980, net.wurstclient.forge.settings.SliderSetting@2319092a]')">Animations </li>
+    <li onclick="openNewWindow('Jesus', 'Allows you to walk on water. Jesus used this hack ~2000 years ago.', 'Category: MOVEMENT\n\n[net.wurstclient.forge.settings.CheckboxSetting@7772f15d]')">Jesus </li>
+    <li onclick="openNewWindow('Spider', 'Allows you to climb up walls like a spider.', 'Category: MOVEMENT\n\n[]')">Spider </li>
+    <li onclick="openNewWindow('FastPlace', 'Allows you to place blocks 5 times faster.', 'Category: WORLD\n\n[]')">FastPlace </li>
+    <li onclick="openNewWindow('NoHurtCam', 'Removes hurt animation.', 'Category: RENDER\n\n[]')">NoHurtCam </li>
+    <li onclick="openNewWindow('NoWeb', 'Prevents you from getting slowed down in webs.', 'Category: MOVEMENT\n\n[]')">NoWeb </li>
+    <li onclick="openNewWindow('NewChunks', 'Shows if chunk has never been loaded before.', 'Category: RENDER\n\n[]')">NewChunks </li>
+    <li onclick="openNewWindow('ChestESP', 'Highlights nearby chests. green - normal chests orange - trapped chests cyan - ender chests', 'Category: RENDER\n\n[net.wurstclient.forge.settings.EnumSetting@40589959]')">ChestESP </li>
+    <li onclick="openNewWindow('ElytraFlight', 'Fly with elytras.', 'Category: MOVEMENT\n\n[net.wurstclient.forge.settings.EnumSetting@3887bf5b, net.wurstclient.forge.settings.SliderSetting@53bcb138, net.wurstclient.forge.settings.SliderSetting@33a45a0b, net.wurstclient.forge.settings.SliderSetting@37b28f77, net.wurstclient.forge.settings.CheckboxSetting@32ca93bd, net.wurstclient.forge.settings.SliderSetting@449d1ad, net.wurstclient.forge.settings.CheckboxSetting@15acb72d, net.wurstclient.forge.settings.CheckboxSetting@36c64bd8, net.wurstclient.forge.settings.CheckboxSetting@50f771c6]')">ElytraFlight </li>
+    <li onclick="openNewWindow('NoCom', 'A NoCom clone.  ONLY WORKS ON OLD VERSIONS OF SERVERS', 'Category: WORLD\n\n[net.wurstclient.forge.settings.CheckboxSetting@1af916cc]')">NoCom </li>
+    <li onclick="openNewWindow('HackerDetector', 'Show and tell you if we suspect hackers in your game other than you.', 'Category: PLAYER\\n\\n[net.wurstclient.forge.settings.CheckboxSetting@6a9cdf61, net.wurstclient.forge.settings.CheckboxSetting@6e80c161, net.wurstclient.forge.settings.CheckboxSetting@592e436, net.wurstclient.forge.settings.CheckboxSetting@570fcd3e]')">HackerDetector</li>
+    <li onclick="openNewWindow('PacketSender', 'Send packets that you desire!.', 'Category: PLAYER\\n\\n[net.wurstclient.forge.settings.CheckboxSetting@5be47769, net.wurstclient.forge.settings.CheckboxSetting@33872ebd]')">PacketSender</li>
+    <li onclick="openNewWindow('Pointer', 'Lets you save temporary points.', 'Category: RENDER\\n\\n[]')">Pointer</li>
+    <li onclick="openNewWindow('AutoPilot', 'Simple automation for navigation.', 'Category: PATHING\\n\\n[net.wurstclient.forge.settings.CheckboxSetting@2126cfaf, net.wurstclient.forge.settings.EnumSetting@8699088, net.wurstclient.forge.settings.SliderSetting@70cef1d3, net.wurstclient.forge.settings.SliderSetting@7a36dbb1, net.wurstclient.forge.settings.SliderSetting@6d7a28ef, net.wurstclient.forge.settings.SliderSetting@29d30818, net.wurstclient.forge.settings.SliderSetting@2e143498]')">AutoPilot</li>
 </ul>
 
 <h2 style="text-align: center; color: white; margin-top: 50px; text-shadow: 2px 2px #000;">Command List</h2>
 
 <ul>
-    <li onclick="openNewWindow('vrtweaks', 'Tweaks your settings for ViveCraft. ')">vrtweaks</li>
-    <li onclick="openNewWindow('binds', 'Manages keybinds. ')">binds</li>
-    <li onclick="openNewWindow('damage', 'Damage yourself. ')">damage</li>
-    <li onclick="openNewWindow('info', 'Get info of a player. ')">info</li>
-    <li onclick="openNewWindow('setslider', 'Modifies a slider setting. ')">setslider</li>
-    <li onclick="openNewWindow('t', 'Toggles a hack. ')">t</li>
-    <li onclick="openNewWindow('boatTp', 'Lets you teleport to a com. ')">boatTp</li>
-    <li onclick="openNewWindow('help', 'Shows help. ')">help</li>
-    <li onclick="openNewWindow('smarttp', 'Tp that works on multiplayer servers.. ')">smarttp</li>
-    <li onclick="openNewWindow('tp', 'Lets you teleport to a com. ')">tp</li>
-    <li onclick="openNewWindow('setenum', 'Modifies an enum setting. ')">setenum</li>
-    <li onclick="openNewWindow('vclip', 'Lets you clip through blocks vertically. ')">vclip</li>
-    <li onclick="openNewWindow('setcheckbox', 'Modifies a checkbox setting. ')">setcheckbox</li>
-    <li onclick="openNewWindow('pearltp', 'Tp that works with pearls. ')">pearltp</li>
-    <li onclick="openNewWindow('clear', 'Clears the chat completely. ')">clear</li>
-    <li onclick="openNewWindow('peek', 'View shulkers/chest without opening them. ')">peek</li>
-    <li onclick="openNewWindow('taco', 'Spawns a dancing taco on your hotbar. ')">taco</li>
-    <li onclick="openNewWindow('face', 'Face the player towards a coord for pathing ')">face</li>
-    <li onclick="openNewWindow('say', 'Says the message. ')">say</li>
-    <li onclick="openNewWindow('gm', 'Shortcut for /gamemode. ')">gm</li>
-    <li onclick="openNewWindow('center', 'Center the players pos perfectly. ')">center</li>
-    <li onclick="openNewWindow('subtract', 'Subtract math. ')">subtract</li>
-    <li onclick="openNewWindow('divide', 'Multiply division. ')">divide</li>
-    <li onclick="openNewWindow('multiply', 'Multiply math. ')">multiply</li>
-    <li onclick="openNewWindow('setap', 'Set the target coords for the AutoPilot module. ')">setap</li>
-    <li onclick="openNewWindow('addPoint', 'Adds a pointer at a coord. ')">addPoint</li>
+    <li onclick="openNewWindow('vrtweaks', 'Tweaks your settings for ViveCraft.', '\n\n[Syntax: .vrtweaks]')">vrtweaks </li>
+    <li onclick="openNewWindow('pearltp', 'Tp that works with pearls.', '\n\n[Syntax: .pearltp <x> <y> <z>]')">pearltp </li>
+    <li onclick="openNewWindow('binds', 'Manages keybinds.', '\n\n[Syntax: .binds add <key> <hacks>, .binds add <key> <commands>, .binds remove <key>, .binds list [<page>], .binds remove-all, .binds reset, Multiple hacks/commands must be separated by ';'.]')">binds </li>
+    <li onclick="openNewWindow('clear', 'Clears the chat completely.', '\n\n[Syntax: .clear]')">clear </li>
+    <li onclick="openNewWindow('give', 'Give yourself items.', '\n\n[Syntax: .give <id> <amount>]')">give </li>
+    <li onclick="openNewWindow('damage', 'Damage yourself.', '\n\n[Syntax: .damage]')">damage </li>
+    <li onclick="openNewWindow('taco', 'Spawns a dancing taco on your hotbar.', '\n\n[Syntax: .taco]')">taco </li>
+    <li onclick="openNewWindow('face', 'Face the player towards a coord for pathing', '\n\n[Syntax: .face <x> <z>]')">face </li>
+    <li onclick="openNewWindow('say', 'Says the message.', '\n\n[Syntax: .say <message>]')">say </li>
+    <li onclick="openNewWindow('setslider', 'Modifies a slider setting.', '\n\n[Syntax: .setslider <hack> <slider> <value>]')">setslider </li>
+    <li onclick="openNewWindow('gm', 'Shortcut for /gamemode.', '\n\n[Syntax: .gm <gamemode>]')">gm </li>
+    <li onclick="openNewWindow('enchant', 'Allows you to enchant your currently holding item.', '\n\n[Syntax: .enchant <id> <level>]')">enchant </li>
+    <li onclick="openNewWindow('t', 'Toggles a hack.', '\n\n[Syntax: .t <hack> [on|off]]')">t </li>
+    <li onclick="openNewWindow('help', 'Shows help.', '\n\n[Syntax: .help <command>, List commands: .help [<page>]]')">help </li>
+    <li onclick="openNewWindow('tp', 'Lets you teleport to a com.', '\n\n[Syntax: .tp <x> <y> <z>]')">tp </li>
+    <li onclick="openNewWindow('setap', 'Set the target coords for the AutoPilot module.', '\n\n[Syntax: .setap <x> <y> <z>]')">setap </li>
+    <li onclick="openNewWindow('addPoint', 'Adds a pointer at a coord.', '\n\n[Syntax: .addPoint <x> <y> <x>]')">addPoint </li>
+    <li onclick="openNewWindow('setenum', 'Modifies an enum setting.', '\n\n[Syntax: .setenum <hack> <enum> <value>]')">setenum </li>
+    <li onclick="openNewWindow('vclip', 'Lets you clip through blocks vertically.', '\n\n[Syntax: .vclip <height>]')">vclip </li>
+    <li onclick="openNewWindow('dupe', 'Dupe the item your currently holding.', '\n\n[Syntax: .dupe]')">dupe </li>
+    <li onclick="openNewWindow('opitem', 'Makes your currently holding item god like.', '\n\n[Syntax: .opitem]')">opitem </li>
+    <li onclick="openNewWindow('setcheckbox', 'Modifies a checkbox setting.', '\n\n[Syntax: .setcheckbox <hack> <checkbox> <value>]')">setcheckbox</li>
 </ul>
-
-
-
-
-
-
-
-<!DOCTYPE html>
-<html>
-<head>
-    <style>
-    body {
-        margin: 0;
-        padding: 0;
-        background-color: #1c1c1c;
-        color: #fff;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 16px;
-        line-height: 1.5;
-    }
-
-    .dropdown-button {
-        position: fixed;
-        top: 10px;
-        padding: 10px;
-        background-color: #333;
-        color: #fff;
-        cursor: pointer;
-        z-index: 9999;
-    }
-
-    #github-button {
-        right: 10px;
-    }
-
-    #html-button {
-        right: 90px;
-    }
-
-    .dropdown {
-        position: fixed;
-        top: 50px;
-        right: 10px;
-        width: auto;
-        max-height: 200px; /* Adjust the height as needed */
-        overflow: auto;
-        background-color: #333;
-        color: #fff;
-        padding: 10px;
-        display: none;
-    }
-
-    .dropdown.show {
-        display: block;
-    }
-</style>
-</head>
-<body>
-<button id="github-button" class="dropdown-button">GitHub</button>
-<button id="html-button" class="dropdown-button">HTML</button>
-<div id="github-dropdown" class="dropdown">
-    <pre id="repo-info"></pre>
-</div>
-<div id="html-dropdown" class="dropdown">
-    <pre id="html-code"></pre>
-</div>
-
-<script>
-    var githubButton = document.getElementById("github-button");
-    var htmlButton = document.getElementById("html-button");
-    var githubDropdown = document.getElementById("github-dropdown");
-    var htmlDropdown = document.getElementById("html-dropdown");
-    var repoInfo = document.getElementById("repo-info");
-    var htmlCode = document.getElementById("html-code");
-
-    githubButton.addEventListener("click", function() {
-        githubDropdown.classList.toggle("show");
-        htmlDropdown.classList.remove("show");
-
-        if (githubDropdown.classList.contains("show")) {
-            // Make an API request to fetch GitHub repository information
-            fetch("https://api.github.com/repos/DeStRuC69/ForgeWurst-Fallen")
-                .then(response => response.json())
-                .then(data => {
-                    // Update the content of the dropdown with the fetched information
-                    repoInfo.textContent = JSON.stringify(data, null, 2);
-                })
-                .catch(error => {
-                    console.log("Error:", error);
-                });
-        }
-    });
-
-    htmlButton.addEventListener("click", function() {
-        htmlDropdown.classList.toggle("show");
-        githubDropdown.classList.remove("show");
-
-        if (htmlDropdown.classList.contains("show")) {
-            // Fetch the index.html file
-            fetch("index.html")
-                .then(response => response.text())
-                .then(data => {
-                    // Update the content of the dropdown with the retrieved HTML code
-                    htmlCode.textContent = data;
-                })
-                .catch(error => {
-                    console.log("Error:", error);
-                });
-        }
-    });
-</script>
-
-</body>
-</html>
