@@ -166,6 +166,8 @@
         <P>Established: 2021-10-05</P>
     </div>
 
+    <div id="banner"></div>
+
     <div class="video-container">
         <div id="player"></div>
     </div>
@@ -229,7 +231,7 @@
             player = new YT.Player('player', {
                 height: '315',
                 width: '560',
-                videoId: 'IgWaSEeh1tY', // Replace with your YouTube video ID
+                videoId: '0', // Replace with your YouTube video ID
                 events: {
                     'onReady': onPlayerReady,
                     'onStateChange': onPlayerStateChange
@@ -255,3 +257,129 @@
     </script>
 </body>
 </html>
+
+<html>
+<head>
+    <style>
+        #banner {
+  background-color: #007bff; /* Blue background color */
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 4px;
+  left: 2px;
+  right: 2px;
+  border-radius: 999px; /* Add border radius for smooth button corners */
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Add transition for smooth animation */
+}
+
+#banner:hover {
+  transform: translate(0, -4px); /* Apply translation on hover to create the floating effect */
+  background-color: #0056b3; /* Darker blue color on hover */
+  cursor: default;
+}
+  </style>
+</head>
+<body>
+
+<script>
+    window.addEventListener('DOMContentLoaded', function() {
+      var banner = document.getElementById('banner');
+      var currentDate = new Date();
+      var currentMonth = currentDate.getMonth() + 1;
+      var currentDay = currentDate.getDate();
+
+      // Check the current date and update the banner text accordingly
+      if (currentMonth === 12 && currentDay === 15) {
+        banner.innerHTML = "Today, we celebrate Terry Davis's birth!";
+      } else if (currentMonth === 8 && currentDay === 11) {
+        banner.innerHTML = "Today, we honor Terry Davis. May his soul rest in peace.";
+      } else if (currentMonth === 10 && currentDay === 8) {
+        banner.innerHTML = "On this day in 2021, Fallen was established!";
+      } else if (currentMonth === 12 && currentDay === 5) {
+        banner.innerHTML = "[Paul - Founder] I was born today!";
+      } else if (currentMonth === 10 && currentDay === 12) {
+        banner.innerHTML = "[RickMondy - Trusted Confidant] I was born today!";
+      } else if (currentMonth === 5 && currentDay === 16) {
+        banner.innerHTML = "[Funny - Resilient Patron] I was born today!";
+      } else if (currentMonth === 7 && currentDay === 11) {
+        banner.innerHTML = "[Zamplex - Early Adopter] I was born today!";
+      } else if (currentMonth === 1 && currentDay === 1) {
+        banner.innerHTML = "Happy new years!";
+      } else if (currentMonth === 12 && currentDay === 25) {
+        banner.innerHTML = "Merry Christmas!";
+      } else if (currentMonth === 11 && currentDay === 19) {
+        banner.innerHTML = "It's International Men's Day!";
+      } else if (currentMonth === 1 && currentDay === 26) {
+        banner.innerHTML = "Happy Australia Day! Fallen is Australian Made.";
+      } else {
+        banner.innerHTML = "Upcoming events: " + getNearestEvent(currentMonth, currentDay);
+      }
+    });
+
+    function getNearestEvent(currentMonth, currentDay) {
+      var currentDate = new Date();
+
+      var terryDavisBirth = new Date(currentDate.getFullYear(), 11, 15);
+      var terryDavisDeath = new Date(currentDate.getFullYear(), 7, 11);
+      var fallenEstablished = new Date(currentDate.getFullYear(), 9, 8);
+      var paulBirthday = new Date(currentDate.getFullYear(), 11, 5);
+      var rickMondyBirthday = new Date(currentDate.getFullYear(), 9, 12);
+      var funnyBirthday = new Date(currentDate.getFullYear(), 4, 16);
+      var zamplexBirthday = new Date(currentDate.getFullYear(), 6, 11);
+      var newYearsDay = new Date(currentDate.getFullYear(), 0, 1);
+      var christmasDay = new Date(currentDate.getFullYear(), 11, 25);
+      var internationalMensDay = new Date(currentDate.getFullYear(), 10, 19);
+      var australiaDay = new Date(currentDate.getFullYear(), 0, 26);
+
+      var eventDates = [terryDavisBirth, terryDavisDeath, fallenEstablished, paulBirthday, rickMondyBirthday,
+        funnyBirthday, zamplexBirthday, newYearsDay, christmasDay, internationalMensDay, australiaDay];
+
+      var nearestEventDate = null;
+      var nearestEventDays = Number.MAX_VALUE;
+
+      for (var i = 0; i < eventDates.length; i++) {
+        var eventDate = eventDates[i];
+
+        if (eventDate.getMonth() + 1 === currentMonth && eventDate.getDate() === currentDay) {
+          return eventDate.toDateString();
+        }
+
+        if (eventDate > currentDate && eventDate.getTime() - currentDate.getTime() < nearestEventDays) {
+          nearestEventDate = eventDate;
+          nearestEventDays = eventDate.getTime() - currentDate.getTime();
+        }
+      }
+
+      if (nearestEventDate) {
+        if (nearestEventDate.getTime() === terryDavisBirth.getTime()) {
+          return "Terry Davis's birth | " + terryDavisBirth.toDateString();
+        } else if (nearestEventDate.getTime() === terryDavisDeath.getTime()) {
+          return "Terry Davis's death | " + terryDavisDeath.toDateString();
+        } else if (nearestEventDate.getTime() === fallenEstablished.getTime()) {
+          return "Fallen established | " + fallenEstablished.toDateString();
+        } else if (nearestEventDate.getTime() === paulBirthday.getTime()) {
+          return "Paul's birth | " + paulBirthday.toDateString();
+        } else if (nearestEventDate.getTime() === rickMondyBirthday.getTime()) {
+          return "RickMondy's birth | " + rickMondyBirthday.toDateString();
+        } else if (nearestEventDate.getTime() === funnyBirthday.getTime()) {
+          return "Funny's birth | " + funnyBirthday.toDateString();
+        } else if (nearestEventDate.getTime() === zamplexBirthday.getTime()) {
+          return "Zamplex's birth | " + zamplexBirthday.toDateString();
+        } else if (nearestEventDate.getTime() === newYearsDay.getTime()) {
+          return "New years | " + newYearsDay.toDateString();
+        } else if (nearestEventDate.getTime() === christmasDay.getTime()) {
+          return "Christmas | " + christmasDay.toDateString();
+        } else if (nearestEventDate.getTime() === internationalMensDay.getTime()) {
+          return "International Men's Day | " + internationalMensDay.toDateString();
+        } else if (nearestEventDate.getTime() === australiaDay.getTime()) {
+          return "Australia Day | " + australiaDay.toDateString();
+        }
+      }
+
+      return "";
+    }
+  </script>
+</body>
+</html>
+
