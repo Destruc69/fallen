@@ -11,6 +11,33 @@
             background-color: #f9f9f9;
         }
 
+        .download-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+
+        /* Add margin to the top to lower the button */
+    margin-top: 20px; /* You can adjust this value as needed */
+}
+
+.download-button:hover {
+    background-color: #0056b3;
+}
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         /* Header Styles */
         .menu-bar {
             background-color: #3498db;
@@ -98,6 +125,7 @@
             color: white;
             text-align: center;
             padding: 150px 0;
+            top: -10px;
         }
 
         .overlay {
@@ -140,7 +168,6 @@
     max-height: 30px;
     width: auto;
 }
-}
 
     </style>
 </head>
@@ -166,11 +193,11 @@
         <P>Established: 2021-10-05</P>
     </div>
 
-    <div id="banner"></div>
-
     <div class="video-container">
         <div id="player"></div>
     </div>
+
+    <a href="https://github.com/Destruc69/ForgeWurst-Fallen/releases/latest" class="download-button">Download Latest</a>
 </div>
 <div id="modules" class="content">
     <h1>Discover the Features</h1>
@@ -189,6 +216,8 @@
     <p>Rise victorious in PvP battles with tools like Kill Aura, Auto Totem, and Reach. Claim your supremacy on the battlefield.</p>
     <h2>Shape the World</h2>
     <p>Manipulate reality with Scaffold Walk, NoFall, SafeWalk, and Auto Eat. Traverse the terrain effortlessly and shape your destiny.</p>
+    <a href="https://github.com/Destruc69/ForgeWurst-Fallen/tree/master/ForgeWurst%20MC%201.12.2/src/shared/java/net/wurstclient/forge/hacks" class="download-button">Have a look!</a>
+
 </div>
 <div id="dev" class="content">
     <h1>28/08/23 | Website Recode</h1>
@@ -199,9 +228,10 @@
     <div class="image-container">
         <img src="https://repository-images.githubusercontent.com/520462766/14c035d3-8159-49dd-8754-4aaec9e97c4a" alt="Image 3">
     </div>
-    <P>^ shitty banner lol</P>
+    <P>^ This is to be redesigned.</P>
     <h2>Licensing Agreement</h2>
     <p>Fallen operates under the GNU General Public License v3.0. For a deeper understanding of our licensing terms, consult the provided license file.</p>
+    <a href="https://github.com/Destruc69/ForgeWurst-Fallen/blob/master/LICENSE.txt" class="download-button">View GNU General Public License v3.0</a>
     <h2>Rooted in ForgeWurst</h2>
     <p>Fallen's roots trace back to ForgeWurst. We acknowledge the foundational contribution of Alexander, enriching the Forge community with Wurst.</p>
     <h2>Join the Cause</h2>
@@ -211,17 +241,17 @@
 </div>
 <script>
     function showContent(contentId) {
-        var contentElements = document.querySelectorAll('.content');
+    var contentElements = document.querySelectorAll('.content');
 
-        for (var i = 0; i < contentElements.length; i++) {
-            contentElements[i].classList.remove('active');
-        }
-
-        var selectedContent = document.getElementById(contentId);
-        if (selectedContent) {
-            selectedContent.classList.add('active');
-        }
+    for (var i = 0; i < contentElements.length; i++) {
+        contentElements[i].classList.remove('active');
     }
+
+    var selectedContent = document.getElementById(contentId);
+    if (selectedContent) {
+        selectedContent.classList.add('active');
+    }
+}
 </script>
 <script src="https://www.youtube.com/iframe_api"></script>
 <script>
@@ -257,129 +287,3 @@
     </script>
 </body>
 </html>
-
-<html>
-<head>
-    <style>
-        #banner {
-  background-color: #007bff; /* Blue background color */
-  padding: 10px;
-  text-align: center;
-  position: fixed;
-  bottom: 4px;
-  left: 2px;
-  right: 2px;
-  border-radius: 999px; /* Add border radius for smooth button corners */
-  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Add transition for smooth animation */
-}
-
-#banner:hover {
-  transform: translate(0, -4px); /* Apply translation on hover to create the floating effect */
-  background-color: #0056b3; /* Darker blue color on hover */
-  cursor: default;
-}
-  </style>
-</head>
-<body>
-
-<script>
-    window.addEventListener('DOMContentLoaded', function() {
-      var banner = document.getElementById('banner');
-      var currentDate = new Date();
-      var currentMonth = currentDate.getMonth() + 1;
-      var currentDay = currentDate.getDate();
-
-      // Check the current date and update the banner text accordingly
-      if (currentMonth === 12 && currentDay === 15) {
-        banner.innerHTML = "Today, we celebrate Terry Davis's birth!";
-      } else if (currentMonth === 8 && currentDay === 11) {
-        banner.innerHTML = "Today, we honor Terry Davis. May his soul rest in peace.";
-      } else if (currentMonth === 10 && currentDay === 8) {
-        banner.innerHTML = "On this day in 2021, Fallen was established!";
-      } else if (currentMonth === 12 && currentDay === 5) {
-        banner.innerHTML = "[Paul - Founder] I was born today!";
-      } else if (currentMonth === 10 && currentDay === 12) {
-        banner.innerHTML = "[RickMondy - Trusted Confidant] I was born today!";
-      } else if (currentMonth === 5 && currentDay === 16) {
-        banner.innerHTML = "[Funny - Resilient Patron] I was born today!";
-      } else if (currentMonth === 7 && currentDay === 11) {
-        banner.innerHTML = "[Zamplex - Early Adopter] I was born today!";
-      } else if (currentMonth === 1 && currentDay === 1) {
-        banner.innerHTML = "Happy new years!";
-      } else if (currentMonth === 12 && currentDay === 25) {
-        banner.innerHTML = "Merry Christmas!";
-      } else if (currentMonth === 11 && currentDay === 19) {
-        banner.innerHTML = "It's International Men's Day!";
-      } else if (currentMonth === 1 && currentDay === 26) {
-        banner.innerHTML = "Happy Australia Day! Fallen is Australian Made.";
-      } else {
-        banner.innerHTML = "Upcoming events: " + getNearestEvent(currentMonth, currentDay);
-      }
-    });
-
-    function getNearestEvent(currentMonth, currentDay) {
-      var currentDate = new Date();
-
-      var terryDavisBirth = new Date(currentDate.getFullYear(), 11, 15);
-      var terryDavisDeath = new Date(currentDate.getFullYear(), 7, 11);
-      var fallenEstablished = new Date(currentDate.getFullYear(), 9, 8);
-      var paulBirthday = new Date(currentDate.getFullYear(), 11, 5);
-      var rickMondyBirthday = new Date(currentDate.getFullYear(), 9, 12);
-      var funnyBirthday = new Date(currentDate.getFullYear(), 4, 16);
-      var zamplexBirthday = new Date(currentDate.getFullYear(), 6, 11);
-      var newYearsDay = new Date(currentDate.getFullYear(), 0, 1);
-      var christmasDay = new Date(currentDate.getFullYear(), 11, 25);
-      var internationalMensDay = new Date(currentDate.getFullYear(), 10, 19);
-      var australiaDay = new Date(currentDate.getFullYear(), 0, 26);
-
-      var eventDates = [terryDavisBirth, terryDavisDeath, fallenEstablished, paulBirthday, rickMondyBirthday,
-        funnyBirthday, zamplexBirthday, newYearsDay, christmasDay, internationalMensDay, australiaDay];
-
-      var nearestEventDate = null;
-      var nearestEventDays = Number.MAX_VALUE;
-
-      for (var i = 0; i < eventDates.length; i++) {
-        var eventDate = eventDates[i];
-
-        if (eventDate.getMonth() + 1 === currentMonth && eventDate.getDate() === currentDay) {
-          return eventDate.toDateString();
-        }
-
-        if (eventDate > currentDate && eventDate.getTime() - currentDate.getTime() < nearestEventDays) {
-          nearestEventDate = eventDate;
-          nearestEventDays = eventDate.getTime() - currentDate.getTime();
-        }
-      }
-
-      if (nearestEventDate) {
-        if (nearestEventDate.getTime() === terryDavisBirth.getTime()) {
-          return "Terry Davis's birth | " + terryDavisBirth.toDateString();
-        } else if (nearestEventDate.getTime() === terryDavisDeath.getTime()) {
-          return "Terry Davis's death | " + terryDavisDeath.toDateString();
-        } else if (nearestEventDate.getTime() === fallenEstablished.getTime()) {
-          return "Fallen established | " + fallenEstablished.toDateString();
-        } else if (nearestEventDate.getTime() === paulBirthday.getTime()) {
-          return "Paul's birth | " + paulBirthday.toDateString();
-        } else if (nearestEventDate.getTime() === rickMondyBirthday.getTime()) {
-          return "RickMondy's birth | " + rickMondyBirthday.toDateString();
-        } else if (nearestEventDate.getTime() === funnyBirthday.getTime()) {
-          return "Funny's birth | " + funnyBirthday.toDateString();
-        } else if (nearestEventDate.getTime() === zamplexBirthday.getTime()) {
-          return "Zamplex's birth | " + zamplexBirthday.toDateString();
-        } else if (nearestEventDate.getTime() === newYearsDay.getTime()) {
-          return "New years | " + newYearsDay.toDateString();
-        } else if (nearestEventDate.getTime() === christmasDay.getTime()) {
-          return "Christmas | " + christmasDay.toDateString();
-        } else if (nearestEventDate.getTime() === internationalMensDay.getTime()) {
-          return "International Men's Day | " + internationalMensDay.toDateString();
-        } else if (nearestEventDate.getTime() === australiaDay.getTime()) {
-          return "Australia Day | " + australiaDay.toDateString();
-        }
-      }
-
-      return "";
-    }
-  </script>
-</body>
-</html>
-
