@@ -5,37 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fallen Utility Mod</title>
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-        }
-
-        .download-button {
-    display: inline-block;
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    font-size: 18px;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-
-        /* Add margin to the top to lower the button */
-    margin-top: 20px; /* You can adjust this value as needed */
-}
-
-.download-button:hover {
-    background-color: #0056b3;
-}
-
-        * {
+        /* Reset some default styles */
+        body, h1, h2, p, a {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
         }
 
         /* Header Styles */
@@ -44,6 +22,7 @@
             border-bottom: 2px solid #2980b9;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             display: flex;
+            justify-content: space-between;
             align-items: center;
             padding: 0 20px;
         }
@@ -51,7 +30,6 @@
         .menu-bar img.menu-logo {
             max-height: 40px;
             margin-right: 10px;
-            margin-top: 2px;
         }
 
         .menu-bar a {
@@ -158,17 +136,36 @@
         }
 
         .social-buttons {
-    margin-left: auto;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-.social-buttons a img {
-    max-height: 30px;
-    width: auto;
-}
+        .social-buttons a img {
+            max-height: 30px;
+            width: auto;
+        }
 
+        /* Download Button Styles */
+        .download-button {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 18px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+            margin-top: 20px;
+        }
+
+        .download-button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
@@ -190,7 +187,7 @@
     <div class="overlay">
         <h1>Welcome to Fallen</h1>
         <p>Embark on a journey with Fallen, a dynamic Minecraft anarchy client born from the essence of ForgeWurst. Explore our powerful features and elevate your anarchy experience to new heights.</p>
-        <P>Established: 2021-10-05</P>
+        <p>Established: 2021-10-05</p>
     </div>
 
     <div class="video-container">
@@ -204,20 +201,25 @@
     <div class="image-container">
         <img src="https://media.discordapp.net/attachments/896198601166974976/1140153678184058951/image.png" alt="Image 2">
     </div>
-    <h2>Anarchy at Heart</h2>
-    <p>Fallen thrives in the chaos of anarchy gameplay, offering an array of enhancements that redefine the boundaries of freedom.</p>
-    <h2>Built on ForgeWurst</h2>
-    <p>Fallen stands on the shoulders of ForgeWurst, breathing life into an extensive client designed for unparalleled anarchy exploration.</p>
-    <h2>Forge Your Interface</h2>
-    <p>Craft your user interface as a testament to your style. Choose themes, layouts, and colors, and let your personality shine through.</p>
-    <h2>Masterful Exploits</h2>
-    <p>Unleash the power of Fallen with exploits and utilities, from fastbreak and X-ray to Freecam. Control the game as you see fit.</p>
-    <h2>Dominate in Combat</h2>
-    <p>Rise victorious in PvP battles with tools like Kill Aura, Auto Totem, and Reach. Claim your supremacy on the battlefield.</p>
-    <h2>Shape the World</h2>
-    <p>Manipulate reality with Scaffold Walk, NoFall, SafeWalk, and Auto Eat. Traverse the terrain effortlessly and shape your destiny.</p>
-    <a href="https://github.com/Destruc69/ForgeWurst-Fallen/tree/master/ForgeWurst%20MC%201.12.2/src/shared/java/net/wurstclient/forge/hacks" class="download-button">Have a look!</a>
+    <h2>Embrace Anarchy</h2>
+    <p>Discover the thrill of chaos in Anarchy gameplay with Fallen. Experience a world of enhancements that redefine the boundaries of freedom.</p>
 
+    <h2>Built on ForgeWurst</h2>
+    <p>Fallen is firmly rooted in the foundation of ForgeWurst, bringing to life an extensive client designed for unparalleled exploration in the world of anarchy.</p>
+
+    <h2>Your Unique Interface</h2>
+    <p>Craft your user interface as a testament to your style. Choose from a variety of themes, layouts, and colors to let your personality shine through.</p>
+
+    <h2>Unleash Your Exploits</h2>
+    <p>Tap into the immense power of Fallen with a range of exploits and utilities. From fastbreak and X-ray to Freecam, you have the control to shape the game as you see fit.</p>
+
+    <h2>Dominate in Combat</h2>
+    <p>Rise victorious in PvP battles with the assistance of tools like Kill Aura, Auto Totem, and Reach. Assert your dominance on the battlefield.</p>
+
+    <h2>Shape the World</h2>
+    <p>Take command of reality with abilities like Scaffold Walk, NoFall, SafeWalk, and Auto Eat. Traverse the terrain effortlessly and carve your destiny.</p>
+
+    <a href="https://github.com/Destruc69/ForgeWurst-Fallen/tree/master/ForgeWurst%20MC%201.12.2/src/shared/java/net/wurstclient/forge/hacks" class="download-button">Explore Now!</a>
 </div>
 <div id="dev" class="content">
     <h1>28/08/23 | Website Recode</h1>
@@ -261,7 +263,7 @@
             player = new YT.Player('player', {
                 height: '315',
                 width: '560',
-                videoId: '0', // Replace with your YouTube video ID
+                videoId: '0', // Replace with your YouTube video ID, TO BE THE TRAILER VIDEO, TRAILER NOT MADE YET
                 events: {
                     'onReady': onPlayerReady,
                     'onStateChange': onPlayerStateChange
@@ -283,6 +285,175 @@
 
         function playVideo() {
             player.playVideo();
+        }
+    </script>
+</body>
+<html/>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: lightblue;
+    color: #333;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.notification.show {
+    opacity: 1;
+}
+
+.notification-content {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Animation for fade-in and fade-out */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+    </style>
+</head>
+<body>
+<div class="notification">
+    <div class="notification-content">Hello World</div>
+</div>
+
+<script>
+        window.addEventListener('DOMContentLoaded', function() {
+            var notification = document.querySelector('.notification');
+            var banner = document.querySelector('.notification-content');
+            var currentDate = new Date();
+            var currentMonth = currentDate.getMonth() + 1;
+            var currentDay = currentDate.getDate();
+
+            // Check the current date and update the banner text accordingly
+            if (currentMonth === 12 && currentDay === 15) {
+                banner.innerHTML = "Today, we celebrate Terry Davis's birth!";
+            } else if (currentMonth === 8 && currentDay === 11) {
+                banner.innerHTML = "Today, we honor Terry Davis. May his soul rest in peace.";
+            } else if (currentMonth === 10 && currentDay === 8) {
+                banner.innerHTML = "On this day in 2021, Fallen was established!";
+            } else if (currentMonth === 12 && currentDay === 5) {
+                banner.innerHTML = "[Paul - Founder] I was born today!";
+            } else if (currentMonth === 10 && currentDay === 12) {
+                banner.innerHTML = "[RickMondy - Trusted Confidant] I was born today!";
+            } else if (currentMonth === 5 && currentDay === 16) {
+                banner.innerHTML = "[Funny - Resilient Patron] I was born today!";
+            } else if (currentMonth === 7 && currentDay === 11) {
+                banner.innerHTML = "[Zamplex - Early Adopter] I was born today!";
+            } else if (currentMonth === 1 && currentDay === 1) {
+                banner.innerHTML = "Happy new years!";
+            } else if (currentMonth === 12 && currentDay === 25) {
+                banner.innerHTML = "Merry Christmas!";
+            } else if (currentMonth === 11 && currentDay === 19) {
+                banner.innerHTML = "It's International Men's Day!";
+            } else if (currentMonth === 1 && currentDay === 26) {
+                banner.innerHTML = "Happy Australia Day! Fallen is Australian Made.";
+            } else {
+                banner.innerHTML = "Upcoming events: " + getNearestEvent(currentMonth, currentDay);
+            }
+
+            // Show the notification
+            notification.classList.add("show");
+
+            // Hide the notification after 5 seconds
+            setTimeout(function () {
+                notification.style.display = "none";
+            }, 5000); // 5000 milliseconds (5 seconds)
+        });
+
+                function getNearestEvent(currentMonth, currentDay) {
+            var currentDate = new Date();
+
+            var terryDavisBirth = new Date(currentDate.getFullYear(), 11, 15);
+            var terryDavisDeath = new Date(currentDate.getFullYear(), 7, 11);
+            var fallenEstablished = new Date(currentDate.getFullYear(), 9, 8);
+            var paulBirthday = new Date(currentDate.getFullYear(), 11, 5);
+            var rickMondyBirthday = new Date(currentDate.getFullYear(), 9, 12);
+            var funnyBirthday = new Date(currentDate.getFullYear(), 4, 16);
+            var zamplexBirthday = new Date(currentDate.getFullYear(), 6, 11);
+            var newYearsDay = new Date(currentDate.getFullYear(), 0, 1);
+            var christmasDay = new Date(currentDate.getFullYear(), 11, 25);
+            var internationalMensDay = new Date(currentDate.getFullYear(), 10, 19);
+            var australiaDay = new Date(currentDate.getFullYear(), 0, 26);
+
+            var eventDates = [terryDavisBirth, terryDavisDeath, fallenEstablished, paulBirthday, rickMondyBirthday,
+                funnyBirthday, zamplexBirthday, newYearsDay, christmasDay, internationalMensDay, australiaDay];
+
+            var nearestEventDate = null;
+            var nearestEventDays = Number.MAX_VALUE;
+
+            for (var i = 0; i < eventDates.length; i++) {
+                var eventDate = eventDates[i];
+
+                if (eventDate.getMonth() + 1 === currentMonth && eventDate.getDate() === currentDay) {
+                    return eventDate.toDateString();
+                }
+
+                if (eventDate > currentDate && eventDate.getTime() - currentDate.getTime() < nearestEventDays) {
+                    nearestEventDate = eventDate;
+                    nearestEventDays = eventDate.getTime() - currentDate.getTime();
+                }
+            }
+
+            if (nearestEventDate) {
+                if (nearestEventDate.getTime() === terryDavisBirth.getTime()) {
+                    return "Terry Davis's birth | " + terryDavisBirth.toDateString();
+                } else if (nearestEventDate.getTime() === terryDavisDeath.getTime()) {
+                    return "Terry Davis's death | " + terryDavisDeath.toDateString();
+                } else if (nearestEventDate.getTime() === fallenEstablished.getTime()) {
+                    return "Fallen established | " + fallenEstablished.toDateString();
+                } else if (nearestEventDate.getTime() === paulBirthday.getTime()) {
+                    return "Paul's birth | " + paulBirthday.toDateString();
+                } else if (nearestEventDate.getTime() === rickMondyBirthday.getTime()) {
+                    return "RickMondy's birth | " + rickMondyBirthday.toDateString();
+                } else if (nearestEventDate.getTime() === funnyBirthday.getTime()) {
+                    return "Funny's birth | " + funnyBirthday.toDateString();
+                } else if (nearestEventDate.getTime() === zamplexBirthday.getTime()) {
+                    return "Zamplex's birth | " + zamplexBirthday.toDateString();
+                } else if (nearestEventDate.getTime() === newYearsDay.getTime()) {
+                    return "New years | " + newYearsDay.toDateString();
+                } else if (nearestEventDate.getTime() === christmasDay.getTime()) {
+                    return "Christmas | " + christmasDay.toDateString();
+                } else if (nearestEventDate.getTime() === internationalMensDay.getTime()) {
+                    return "International Men's Day | " + internationalMensDay.toDateString();
+                } else if (nearestEventDate.getTime() === australiaDay.getTime()) {
+                    return "Australia Day | " + australiaDay.toDateString();
+                }
+            }
+
+            return "";
         }
     </script>
 </body>
