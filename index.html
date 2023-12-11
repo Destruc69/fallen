@@ -251,6 +251,8 @@
     <p>Contribute: Shape the evolution of Fallen by submitting pull requests, reporting issues, or proposing features via GitHub. Maintain a respectful, collaborative atmosphere.</p>
     <p>Support: Connect with the Fallen community on Discord at <a href="https://discord.gg/S8KMuFyd9Y">https://discord.gg/S8KMuFyd9Y</a> for assistance, inquiries, and camaraderie.</p>
     <p>Donate: Fuel development and community growth through donations at <a href="https://www.paypal.me/WurstImperium">https://www.paypal.me/WurstImperium</a>. Every contribution fuels innovation!</p>
+    <h2>My thoughts, ideologies, beliefs and ethics</h2>
+    <a href="https://destruc69.github.io/Oliquisition/" class="download-button">View my personal Website</a>
 </div>
 <script>
     function showContent(contentId) {
@@ -467,5 +469,61 @@
             return "";
         }
     </script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .info-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .info-button {
+            background-color: #5cb8e6; /* Light blue with a tint of dark */
+            color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .info-box {
+            background-color: #5cb8e6; /* Light blue with a tint of dark */
+            color: #fff;
+            padding: 15px;
+            border-radius: 20px;
+            opacity: 0;
+            height: 0;
+            overflow: hidden;
+            transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+
+        .info-container:hover .info-box {
+            opacity: 1;
+            height: 75px; /* Adjust the height based on your content */
+        }
+    </style>
+    <title>Info Box</title>
+</head>
+<body>
+
+<div class="info-container">
+    <div class="info-button">Show Info</div>
+    <div class="info-box">
+        <p>Information</p>
+        <p>Modules: 120</p>
+        <p>Commands: 20</p>
+    </div>
+</div>
+
 </body>
 </html>
