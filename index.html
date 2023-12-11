@@ -393,6 +393,8 @@
                 banner.innerHTML = "It's International Men's Day!";
             } else if (currentMonth === 1 && currentDay === 26) {
                 banner.innerHTML = "Happy Australia Day! Fallen is Australian Made.";
+            } else if (currentMonth === 2 && currentDay === 9) {
+                banner.innerHTML = "Happy birthday Alexander! Thank you for Wurst."
             } else {
                 banner.innerHTML = "Upcoming events: " + getNearestEvent(currentMonth, currentDay);
             }
@@ -420,9 +422,10 @@
             var christmasDay = new Date(currentDate.getFullYear(), 11, 25);
             var internationalMensDay = new Date(currentDate.getFullYear(), 10, 19);
             var australiaDay = new Date(currentDate.getFullYear(), 0, 26);
+            var alexandersBirthday = new Date(currentDate.getFullYear(), 1, 9);
 
             var eventDates = [terryDavisBirth, terryDavisDeath, fallenEstablished, paulBirthday, rickMondyBirthday,
-                funnyBirthday, zamplexBirthday, newYearsDay, christmasDay, internationalMensDay, australiaDay];
+                funnyBirthday, zamplexBirthday, newYearsDay, christmasDay, internationalMensDay, australiaDay, alexandersBirthday];
 
             var nearestEventDate = null;
             var nearestEventDays = Number.MAX_VALUE;
@@ -463,6 +466,8 @@
                     return "International Men's Day | " + internationalMensDay.toDateString();
                 } else if (nearestEventDate.getTime() === australiaDay.getTime()) {
                     return "Australia Day | " + australiaDay.toDateString();
+                } else if (nearestEventDate.getTime() === alexandersBirthday.toDateString()) {
+                    return "Alexanders Birthday |" + alexandersBirthday.toDateString();
                 }
             }
 
