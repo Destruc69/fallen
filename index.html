@@ -172,6 +172,86 @@
         .download-button:hover {
             background-color: #0056b3;
         }
+
+                .notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: lightblue;
+    color: #333;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.notification.show {
+    opacity: 1;
+}
+
+.notification-content {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Animation for fade-in and fade-out */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+        .info-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .info-button {
+            background-color: #5cb8e6; /* Light blue with a tint of dark */
+            color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .info-box {
+            background-color: #5cb8e6; /* Light blue with a tint of dark */
+            color: #fff;
+            padding: 15px;
+            border-radius: 20px;
+            opacity: 0;
+            height: 0;
+            overflow: hidden;
+            transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        }
+
+        .info-container:hover .info-box {
+            opacity: 1;
+            height: 75px; /* Adjust the height based on your content */
+        }
     </style>
 </head>
 <body>
@@ -205,7 +285,7 @@
 <div id="modules" class="content">
   <h1>Discover the Features</h1>
   <div class="image-container">
-    <img src="https://media.discordapp.net/attachments/896198601166974976/1218083074286555166/image.png?ex=66065f43&is=65f3ea43&hm=7788e885543a74f5bdf59c59002634ae6eb6830309b9048eea66749560a99196&=&format=webp&quality=lossless&width=1281&height=676" alt="Image 2">
+    <img src="https://cdn.discordapp.com/attachments/896198601166974976/1218083074286555166/image.png?ex=6618d443&is=66065f43&hm=a2753610d82bf99a0d5be71816a8e42b69768c7183d7e05aa5b49d69cd7eaebc&" alt="Image 2">
   </div>
   <h2>Embrace Anarchy</h2>
   <p>Discover the thrill of chaos in Anarchy gameplay with Fallen. Experience a world of enhancements that redefine the boundaries of freedom.</p>
@@ -258,9 +338,7 @@
         selectedContent.classList.add('active');
     }
 }
-</script>
-<script src="https://www.youtube.com/iframe_api"></script>
-<script>
+
         var player;
 
         function onYouTubeIframeAPIReady() {
@@ -290,71 +368,8 @@
         function playVideo() {
             player.playVideo();
         }
-    </script>
-</body>
-<html/>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-        .notification {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background-color: lightblue;
-    color: #333;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    z-index: 999;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.notification.show {
-    opacity: 1;
-}
-
-.notification-content {
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-}
-
-/* Animation for fade-in and fade-out */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeOut {
-    0% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-}
-    </style>
-</head>
-<body>
-<div class="notification">
-  <div class="notification-content">Hello World</div>
-</div>
-
-<script>
-        window.addEventListener('DOMContentLoaded', function() {
+                window.addEventListener('DOMContentLoaded', function() {
             var notification = document.querySelector('.notification');
             var banner = document.querySelector('.notification-content');
             var currentDate = new Date();
@@ -464,7 +479,21 @@
 
             return "";
         }
-    </script>
+</script>
+<script src="https://www.youtube.com/iframe_api"></script>
+</body>
+<html/>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="notification">
+  <div class="notification-content">Hello World</div>
+</div>
 </body>
 </html>
 
@@ -474,40 +503,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-        .info-container {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-        }
-
-        .info-button {
-            background-color: #5cb8e6; /* Light blue with a tint of dark */
-            color: #fff;
-            padding: 10px;
-            border-radius: 10px;
-            cursor: pointer;
-        }
-
-        .info-box {
-            background-color: #5cb8e6; /* Light blue with a tint of dark */
-            color: #fff;
-            padding: 15px;
-            border-radius: 20px;
-            opacity: 0;
-            height: 0;
-            overflow: hidden;
-            transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
-        }
-
-        .info-container:hover .info-box {
-            opacity: 1;
-            height: 75px; /* Adjust the height based on your content */
-        }
-    </style>
   <title>Info Box</title>
 </head>
 <body>
