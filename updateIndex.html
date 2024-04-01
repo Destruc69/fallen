@@ -196,9 +196,79 @@
             transform: translateY(0);
         }
     }
+
+.bio-container {
+  text-align: center;
+}
+
+.bio-card {
+  display: inline-block;
+  width: 300px; /* Increased width for more room */
+  margin: 20px auto; /* Changed margin to auto to center horizontally */
+  text-align: center;
+  border: 2px solid #333;
+  border-radius: 15px;
+  padding: 10px;
+  position: relative; /* Added position relative */
+  transition: transform 0.3s ease; /* Added transition for smooth effect on hover */
+}
+
+.bio-card:hover {
+  transform: translateY(-5px); /* Move the card up slightly on hover */
+}
+
+.bio-card:hover .bio-description {
+  opacity: 1; /* Show description on hover */
+}
+
+.bio-description {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0; /* Hide description by default */
+  position: absolute; /* Position description relative to parent */
+  bottom: 10px; /* Adjust bottom spacing as needed */
+  background-color: rgba(0, 0, 0, 0.8); /* Background color with transparency */
+  color: white;
+  padding: 5px 10px; /* Add padding */
+  border-radius: 5px; /* Add border radius */
+  transition: opacity 0.3s ease; /* Added transition for smooth fade effect */
+  width: 300px;
+}
+
+.bio-description:hover {
+  opacity: 1; /* Show description on hover */
+}
+
+.bio-card img {
+  display: block; /* Ensures the image is centered properly */
+  margin: 0 auto; /* Centers the image horizontally */
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.bio-card h3 {
+  margin: 5px;
+  font-size: 18px;
+}
+
+/* Position description for bio cards on the left */
+.bio-card.left .bio-description {
+  right: calc(100% + 20px); /* Position to the left of the bio card */
+  transform: none; /* Remove horizontal centering transform */
+}
+
+/* Position description for bio cards on the right */
+.bio-card.right .bio-description {
+  left: calc(100% + 20px); /* Position to the right of the bio card */
+  transform: none; /* Remove horizontal centering transform */
+}
+
   </style>
 </head>
 <body>
+
 <section id="title">
   <div id="title-content">
     <h1>Fallen</h1>
@@ -214,12 +284,12 @@
       <p>Unlock an extensive array of features to enhance your gameplay experience.</p>
     </div>
     <div class="feature-box">
-      <h2>Packed with Bypasses</h2>
-      <p>Stay ahead of anti-cheat systems with our powerful bypasses.</p>
-    </div>
-    <div class="feature-box">
       <h2>Anarchy Oriented</h2>
       <p>Perfect for chaotic servers, unleash your true potential in anarchy mode.</p>
+    </div>
+    <div class="feature-box">
+      <h2>Packed with Bypasses</h2>
+      <p>Stay ahead of anti-cheat systems with our powerful bypasses.</p>
     </div>
   </div>
 </section>
@@ -244,6 +314,26 @@
     </div>
   </div>
 </section>
+<div class="bio-container">
+  <div class="bio-card left">
+    <img src="https://avatars.githubusercontent.com/u/85436971?v=4" alt="Person 1">
+    <h3>Paul</h3>
+    <p>&nbsp;&nbsp;Lead Developer and&nbsp;&nbsp;&nbsp; Owner</p>
+    <div class="bio-description">
+      <p>It began with a passion for Wurst, leading to my semi-successful ForgeWurst project aimed at enhancing the Forge version of Wurst, which was desperately needed. When 2b2t updated versions, it was time to archive ForgeWurst and start my own client from scratch. Much of my work on my fork has been transferred to Fallen.</p>
+    </div>
+  </div>
+
+  <div class="bio-card right">
+    <img src="https://cdn.discordapp.com/avatars/608753777213702209/22f28219a9358e87d7b46d62e2665f25.webp?size=80" alt="Person 2">
+    <h3>RickMondy</h3>
+    <p>Server Manager and Developer</p>
+    <div class="bio-description">
+      <p>Description for RickMondy</p>
+    </div>
+  </div>
+</div>
+
 <script>
     window.addEventListener('scroll', function() {
         const title = document.getElementById('title');
@@ -257,6 +347,28 @@
             titleContent.style.opacity = '1';
         }
     });
+
+const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.5
+};
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        const headerButtons = document.querySelector('.header-buttons');
+        if (entry.isIntersecting) {
+            headerButtons.classList.remove('hide');
+            headerButtons.classList.add('show');
+        } else {
+            headerButtons.classList.remove('show');
+            headerButtons.classList.add('hide');
+        }
+    });
+}, options);
+
+observer.observe(document.querySelector('#title'));
+
 </script>
 </body>
 </html>
